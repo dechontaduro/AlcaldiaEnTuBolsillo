@@ -1,0 +1,150 @@
+<resources>
+    <color name="bar_theme_pressed_start">#80111111</color>
+    <color name="bar_theme_pressed_end">#80000000</color>
+
+    <color name="bar_theme_released_start">#7DCECA</color>
+    <color name="bar_theme_released_end">#2FB0AB</color>
+
+    <color name="aceites_released_start">#FFBFB030</color>
+    <color name="aceites_released_end">#3FBFB030</color>
+
+    <color name="aseo_released_start">#FF2F6699</color>
+    <color name="aseo_released_end">#3F2F6699</color>
+
+    <color name="cafe_released_start">#FFA66600</color>
+    <color name="cafe_released_end">#3FA66600</color>
+
+    <color name="chocolates_released_start">#FFFFE400</color>
+    <color name="chocolates_released_end">#3FFFE400</color>
+
+    <color name="distribuidos_released_start">#FF33993F</color>
+    <color name="distribuidos_released_end">#3F33993F</color>
+
+    <color name="harinas_released_start">#FF63DD8D</color>
+    <color name="harinas_released_end">#3F63DD8D</color>
+
+    <color name="margarinas_released_start">#FFFFF073</color>
+    <color name="margarinas_released_end">#6FFFF073</color>
+
+    <color name="promociones_released_start">#FFFFF073</color>
+    <color name="promociones_released_end">#3FFFF073</color>
+
+    <color name="sin_clasificar_released_start">#FFAA2222</color>
+    <color name="sin_clasificar_released_end">#3FAA2222</color>
+
+    <color name="vikingos_released_start">#FF0F4DA8</color>
+    <color name="vikingos_released_end">#3F0F4DA8</color>
+
+    <color name="salsas_released_start">#FF37DD6F</color>
+    <color name="salsas_released_end">#3F37DD6F</color>
+
+    <color name="jgb_released_start">#FF0007DD</color>
+    <color name="jgb_released_end">#3F1689FF</color>
+
+
+    <color name="aceites_pressed_start">#3FBFB030</color>
+    <color name="aceites_pressed_end">#FFBFB030</color>
+
+    <color name="aseo_pressed_start">#3F2F6699</color>
+    <color name="aseo_pressed_end">#FF2F6699</color>
+
+    <color name="cafe_pressed_start">#3FA66600</color>
+    <color name="cafe_pressed_end">#FFA66600</color>
+
+    <color name="chocolates_pressed_start">#3FFFE400</color>
+    <color name="chocolates_pressed_end">#FFFFE400</color>
+
+    <color name="distribuidos_pressed_start">#3F33993F</color>
+    <color name="distribuidos_pressed_end">#FF33993F</color>
+
+    <color name="harinas_pressed_start">#3F63DD8D</color>
+    <color name="harinas_pressed_end">#FF63DD8D</color>
+
+    <color name="margarinas_pressed_start">#6FFFF073</color>
+    <color name="margarinas_pressed_end">#FFFFF073</color>
+
+    <color name="promociones_pressed_start">#3FFFF073</color>
+    <color name="promociones_pressed_end">#FFFFF073</color>
+
+    <color name="sin_clasificar_pressed_start">#3FAA2222</color>
+    <color name="sin_clasificar_pressed_end">#FFAA2222</color>
+
+    <color name="vikingos_pressed_start">#3F0F4DA8</color>
+    <color name="vikingos_pressed_end">#FF0F4DA8</color>
+
+    <color name="salsas_pressed_start">#3F37DD6F</color>
+    <color name="salsas_pressed_end">#FF37DD6F</color>
+
+    <color name="jgb_pressed_start">#3F1689FF</color>
+    <color name="jgb_pressed_end">#FF0007DD</color>
+
+
+    <color name="volver_pressed_start">#80C3BE</color>
+    <color name="volver_pressed_end">#FF343434</color>
+    <color name="volver_released_start">#80C3BE</color>
+    <color name="volver_released_end">#3F343434</color>
+
+    <color name="tarea_released_start">#FF0F4DA8</color>
+    <color name="tarea_released_end">#3F0F4DA8</color>
+    <color name="tarea_pressed_start">#3F0F4DA8</color>
+    <color name="tarea_pressed_end">#FF0F4DA8</color>
+
+    <color name="mensaje_released_start">#FF757575</color>
+    <color name="mensaje_released_end">#3F757575</color>
+    <color name="mensaje_pressed_start">#3F757575</color>
+    <color name="mensaje_pressed_end">#FF757575</color>
+
+
+    <color name="transparente">#FFFFFFFF</color>
+    <color name="mensaje_no_leido">#FF3F0000</color>
+    <color name="black_overlay">#66000000</color>
+
+
+    <color name="cliente_pressed_start">#3F2F6699</color>
+    <color name="cliente_pressed_end">#FF2F6699</color>
+    <color name="cliente_released_start">#FF2F6699</color>
+    <color name="cliente_released_end">#3F2F6699</color>
+
+    <color name="cliente_pendiente_pressed_start">#3FFF9900</color>
+    <color name="cliente_pendiente_pressed_end">#FFFF9900</color>
+    <color name="cliente_pendiente_released_start">#FFFF9900</color>
+    <color name="cliente_pendiente_released_end">#3FFF9900</color>
+
+
+    <color name="cliente_pendiente_terminado_pressed_start">#3FFF0000</color>
+    <color name="cliente_pendiente_terminado_pressed_end">#FFFF0000</color>
+    <color name="cliente_pendiente_terminado_released_start">#FFFF0000</color>
+    <color name="cliente_pendiente_terminado_released_end">#3FFF0000</color>
+
+    <color name="cliente_terminado_pressed_start">#3F00FF00</color>
+    <color name="cliente_terminado_pressed_end">#ff23ff00</color>
+    <color name="cliente_terminado_released_start">#FF00FF00</color>
+    <color name="cliente_terminado_released_end">#3F00FF00</color>
+
+    <color name="bordeBoton">#405C5A</color>
+
+    <color name="btn_ingresar_release_start">#2DB0AA</color>
+    <color name="btn_ingresar_release_end">#2C9A93</color>
+    <color name="btn_ingresar_pressed_start">#51CBC5</color>
+    <color name="btn_ingresar_pressed_end">#70E6E1</color>
+
+    <color name="btn_header_release_start">#87C7C3</color>
+    <color name="btn_header_release_end">#3EC6C0</color>
+    <color name="btn_header_pressed_start">#51CBC5</color>
+    <color name="btn_header_pressed_end">#70E6E1</color>
+
+    <color name="btn_pqr_release_start">#2EB1AB</color>
+    <color name="blanco">#ffffffff</color>
+
+    <color name="header_pqrreg">#80111111</color>
+    <color name="fondo1MisPqr">#ffd0f0ff</color>
+    <color name="fondo2MisPqr">#ff879cff</color>
+    <color name="fondo3MisPqr">#fff7ff87</color>
+    <color name="fondo4MisPqr">#fffeff7b</color>
+
+    <color name="fondo_footer_start">#803aa5f5</color>
+    <color name="fondo_footer_end">#80215cf5</color>
+
+    <color name="fondo_start_edttexto">#ffffff</color>
+    <color name="fondo_end_edttexto">#ffd7d7d7</color>
+</resources>

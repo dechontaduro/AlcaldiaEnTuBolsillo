@@ -1,0 +1,42 @@
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/ScrollIni"
+    android:layout_gravity="left|center_vertical"
+    android:background="@color/blanco"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutIni"
+        android:orientation="vertical"
+        tools:context=".MainActivity" >
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header"
+            android:layout_width="fill_parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:id="@+id/splash"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_gravity="center"
+            android:src="@drawable/inicio_pqr2" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:text="@string/btn_ingresar"
+            android:id="@+id/btnIngresar"
+            style="@style/textoEncabezado"
+            android:background="@drawable/botoningresar"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+</ScrollView>

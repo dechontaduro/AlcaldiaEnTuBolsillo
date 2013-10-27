@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bpmco.tramitefacil"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.bpmco.tramitefacil.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_listadoPqr"
+            android:label="@string/title_activity_activity_listado_pqr" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_qdSaber"
+            android:label="@string/title_activity_activity_qd_saber" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_PQRRegister"
+            android:label="@string/title_activity_activity__pqrregister" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_DatosPersonales"
+            android:label="@string/title_activity_activity__datos_personales" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_MisPqr"
+            android:label="@string/title_activity_activity__mis_pqr" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_AcercaDe"
+            android:label="@string/title_activity_activity__acerca_de" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_render"
+            android:label="@string/title_activity_activity__render" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_Respuesta"
+            android:label="@string/title_activity_activity__respuesta" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_Resumen"
+            android:label="@string/title_activity_activity__resumen" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_Tomar_Foto"
+            android:label="@string/title_activity_tomar__foto_" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_Grabar_Video"
+            android:label="@string/title_activity_grabar__video_" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_Adjuntar"
+            android:label="@string/title_activity_activity__adjuntar" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_Config"
+            android:label="@string/title_activity_activity__config" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.activity_form1"
+            android:label="@string/title_activity_activity_form1" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_form1"
+            android:label="@string/title_activity_activity_form1" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_form2"
+            android:label="@string/title_activity_activity_form2" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_form21"
+            android:label="@string/title_activity_activity_form21" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_Preview_Foto"
+            android:label="@string/title_activity_activity__preview__foto" >
+        </activity>
+        <activity
+            android:name="com.bpmco.tramitefacil.Activity_Preview_Video"
+            android:label="@string/title_activity_activity__preview__video" >
+        </activity>
+    </application>
+
+</manifest>

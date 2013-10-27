@@ -1,0 +1,131 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="left|center_vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lytppal">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/headericonos"
+            android:layout_width="fill_parent" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Entidad Generadora de Queja"/>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:id="@+id/repsips">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eps"
+                android:checked="true"
+                android:text="EPS"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ips"
+                android:text="IPS"/>
+        </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Seleccione"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawSelectorOnTop="true"
+            android:id="@+id/spEPSIPS"
+            android:entries="@array/EPS"
+            style="?android:attr/spinnerDropDownItemStyle"></Spinner>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtEdadMeses"
+        android:text="Nombre Entidad Generadora de Queja"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtNombreEntidadQueja"
+        android:background="@drawable/cuadrotexto"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Clasifique su queja de Salud"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawSelectorOnTop="true"
+        android:id="@+id/spTipoQuejaSalud"
+        android:entries="@array/tipoquejasalud"
+        style="?android:attr/spinnerDropDownItemStyle"></Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Motivo de la solicitud"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/txtMotivo"
+            android:gravity="left"
+            android:maxLines="10"
+            android:singleLine="false"
+            android:background="@drawable/cuadrotexto"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="10dp">
+        </View>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btnSiguiente"
+            android:text="Paso 3 de 4"
+            android:background="@drawable/botoningresar"
+            style="@style/textoEncabezado"/>
+
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:paddingLeft="0dp"
+    android:background="@color/bar_theme_released_end"
+    android:orientation="horizontal" >
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/header"
+	    android:paddingLeft="0dp"
+	    android:orientation="horizontal"
+	    >
+
+	    <TextView
+	        android:id="@+id/txtcabecera"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:gravity="center"
+	        android:text="@string/tituloEncabezado"
+	        android:textSize="22sp"
+	        android:scrollHorizontally="false"
+			android:singleLine="false"
+	        android:ellipsize="marquee"
+            style="@style/textoEncabezado"/>
+    </LinearLayout>
+</LinearLayout>

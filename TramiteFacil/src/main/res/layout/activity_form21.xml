@@ -1,0 +1,118 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="left|center_vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lytppal">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/headericonos"
+            android:layout_width="fill_parent" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Tipo :"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spbarriosvereda"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/tipos"
+            style="?android:attr/spinnerDropDownItemStyle"></Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Lugar o Dirección en donde tiene el problema"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtlugar"
+            android:background="@drawable/cuadrotexto"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Barrio o Vereda"
+            android:textSize="18dp"/>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/rbarriovereda">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/barrio"
+                android:checked="true"
+                android:text="Barrio"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vereda"
+                android:text="Vereda"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccione"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spbarriosvereda"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/barrios"
+            style="?android:attr/spinnerDropDownItemStyle"></Spinner>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp">
+        </View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/aseo_released_end"
+            android:padding="5dp"
+            android:text="Motivo de la solicitud :"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:maxLines="10"
+            android:id="@+id/txtMotivo"
+            android:layout_height="wrap_content"/>
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp">
+        </View>
+
+        <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSiguiente"
+        android:text="Paso 2 de 3"
+        android:background="@drawable/botoningresar"
+        style="@style/textoEncabezado"/>
+
+    </LinearLayout>
+</ScrollView>

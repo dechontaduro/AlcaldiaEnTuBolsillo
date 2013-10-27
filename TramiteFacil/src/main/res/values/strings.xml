@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tramite Facil</string>
+    <string name="action_settings">Configuracion</string>
+    <string name="tituloAlcaldia">Alcaldia de Manizales</string>
+    <string name="tituloEncabezado">Gobierno En Tu Bolsillo</string>
+    <string name="title_activity_activity_listado_pqr">Alcaldía de Manizales</string>
+    <string name="title_activity_activity_qd_saber">qdsaber</string>
+    <string name="title_activity_activity__pqrregister">PQR Radicación</string>
+    <string name="btn_pqrregisterback">Regresar</string>
+    <string name="btn_ingresar">Ingresar</string>
+    <string name="label">campo:</string>
+    <string name="title_activity_activity__datos_personales">Datos Personales</string>
+    <string name="titulo_qdSaber">¿Qué debo saber?</string>
+    <string name="titulo_datosPersonales">Datos Personales</string>
+    <string name="titulo_formulariopqr">Formulario PQR</string>
+    <string name="btnDatosPersonales">Continuar</string>
+    <string name="labelTipoId">Tipo de Identificación:</string>
+    <string name="labelNumId">No de Identificación:</string>
+    <string name="labelNombre">Nombre:</string>
+    <string name="labelApellido">Apellido:</string>
+    <string name="labelEmail">E-mail:</string>
+    <string name="labelTelefono">Telefono:</string>
+    <string name="labelDireccion">Direccion de Notificación:</string>
+    <string name="labelCiudad">Ciudad de Residencia:</string>
+    <string name="ciudad">Manizales</string>
+    <string name="title_activity_activity__mis_pqr">MisPqr</string>
+    <string name="tituloMisPqr">Seguimiento</string>
+    <string name="labelSolicitudes">Solicitudes Registradas</string>
+    <string name="textofooter1">Seguimiento</string>
+    <string name="textofooter2">Acerca De</string>
+
+    <!-- Acerca de -->
+
+    <string name="queesgov">¿Qué es Gobierno en Tu Bolsillo?</string>
+    <string name="descripcion">Gobierno en tu bolsillo es una aplicación que te permite
+    utilizar un télefono inteligente para realizar de forma rapida y sencilla
+    registro y seguimiento de Peticiones, Quejas y Reclamos ante la alcaldía Municipal
+    de Manizales.</string>
+    <string name="descripcion2">Desarollador Por:
+    \n\nCristian Camilo Cantillo.
+    \nFelipe Callejas.
+    \nJuan Carlos Gonzáles.
+    \nSantiago Marín.</string>
+    <string name="descripcion3">Talento 100% Manizaleño para Manizaleños <a href="http://www.bpmco.co">BPMco</a></string>
+    <string name="title_activity_activity__acerca_de">AcercaDe</string>
+    <string name="title_activity_activity__render">AcercaDe</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="txtQDSaber1">Es Obligación de la Entidad Darte una respuesta</string>
+    <string name="txtQDSaber2">El Tiempo de Respuesta depende del tipo y esta entre 10 y 30 días, pero comunmente
+    la respuesta es más rápida</string>
+    <string name="txtQDSaber3">Debes indicarnos donde vas a recibir la respuesta, sin esto no podemos hacer efectiva la PQR</string>
+    <string name="title_activity_activity__respuesta">Respuesta</string>
+    <string name="title_activity_activity__resumen">Información PQR</string>
+    <string name="titulo_adjuntar">Adjuntos</string>
+    <string name="txt_boton_registrar">Registrar</string>
+    <string name="title_activity_tomar__foto_">Foto</string>
+    <string name="lblAdjuntarFoto">Desea adjuntar una foto:</string>
+    <string name="lblAdjuntarVideo">Desea adjuntar un video:</string>
+    <string name="title_activity_activity_form1">PQR Salud</string>
+    <string name="title_activity_activity_form2">PQR Salud</string>
+    <string name="lbl_sincronizacion">Última Sincronizacion:</string>
+    <string name="txt_resumen">Resumen</string>
+    <string name="txt_inicio">Inicio</string>
+    <string name="txt_configuracion">¿Qué conexión se usará para radicar y consultar las PQR?</string>
+
+    <!-- Foto y Video -->
+    <string name="titulobotonguardarfoto">Guardar</string>
+    <string name="titulobotoncancelarfoto">Cancelar</string>
+    <string name="title_activity_grabar__video_">Video</string>
+    <string name="title_activity_activity__adjuntar">Adjuntar</string>
+    <string name="lblFoto">Foto Guardada</string>
+    <string name="lblVideo">Video Guardado</string>
+    <string name="title_activity_activity_form21">PQR General</string>
+    <string name="title_activity_activity__config">Configuración</string>
+    <string name="title_activity_activity__preview__foto">Foto</string>
+    <string name="title_activity_activity__preview__video">Video</string>
+    <string name="label_boton_siguiente">Paso %1$s de %2$s</string>
+    <string name="contentdescription"></string>
+</resources>

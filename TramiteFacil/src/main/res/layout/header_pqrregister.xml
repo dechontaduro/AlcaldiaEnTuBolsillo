@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/header_pqrreg_horizontal_margin"
+    android:background="@color/header_pqrreg">
+
+    <Button
+        style="@style/ButtonHeaderPQR"
+        android:text="Atras"
+        android:id="@+id/btnHeaderLeft" />
+    <TextView
+        style="@style/TextViewHeaderPQR"
+        android:id="@+id/txtHeader" />
+    <Button
+        style="@style/ButtonHeaderPQR"
+        android:text="Atras"
+        android:id="@+id/btnHeaderRight" />
+</LinearLayout>

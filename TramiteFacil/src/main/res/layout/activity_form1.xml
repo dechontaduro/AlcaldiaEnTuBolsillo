@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left|center_vertical">
+
+    <LinearLayout
+        android:focusable="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lytppal">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/headericonos"
+        android:layout_width="fill_parent" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Tipo :"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tipo"
+        android:entries="@array/tipos"
+        style="?android:attr/spinnerDropDownItemStyle"></Spinner>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Lugar o Dirección en donde tiene el problema"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtlugar"
+        android:background="@drawable/cuadrotexto"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Barrio o Vereda"
+        android:textSize="18dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rbarriovereda">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/barrio"
+                android:checked="true"
+                android:text="Barrio"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vereda"
+                android:text="Vereda"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Seleccione"/>
+
+     <Spinner
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:id="@+id/spbarriosvereda"
+         android:entries="@array/barrios"
+         style="?android:attr/spinnerItemStyle"></Spinner>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="10dp">
+    </View>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        style="@style/textoEncabezado"
+        android:background="@drawable/header"
+        android:text="Informacion del afectado"></TextView>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="10dp">
+        </View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Documento :"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawSelectorOnTop="true"
+            android:id="@+id/spTipoDoc"
+            style="?android:attr/spinnerItemStyle"
+            android:entries="@array/tipoDoc"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Numero Identificación"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/txtIdenti"
+            android:inputType="number"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cuadrotexto"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Nombre del Afectado"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/txtNombreAfectado"
+            android:background="@drawable/cuadrotexto"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Edad (Años)"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/txtEdadAnio"
+            android:inputType="number"
+            android:background="@drawable/cuadrotexto"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:id="@+id/textMes"
+            android:text="Edad (Meses)"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/txtEdadMeses"
+            android:visibility="gone"
+            android:inputType="number"
+            android:background="@drawable/cuadrotexto"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="10dp">
+        </View>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSiguiente"
+            android:text="Paso 2 de 4"
+            android:background="@drawable/botoningresar"
+            style="@style/textoEncabezado"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

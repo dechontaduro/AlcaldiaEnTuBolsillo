@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipoDoc">
+        <item>Cedula de Ciudadanía</item>
+        <item>NIT</item>
+        <item>Pasaporte</item>
+        <item>Tarjeta de Identidad</item>
+        <item>Cédula de Extranjería</item>
+        <item>Registro Civil</item>
+    </string-array>
+
+    <string-array name="tipos">
+        <item>DENUNCIA</item>
+        <item>QUEJA</item>
+        <item>RECLAMO</item>
+        <item>MANIFESTACION</item>
+        <item>CONSULTA</item>
+        <item>SUGERENCIA</item>
+        <item>FELICITACION</item>
+        <item>PETICION DE INFORMACION</item>
+        <item>OTRO TIPO</item>
+    </string-array>
+
+    <string-array name="barrios">
+        <item>Seleccione</item>
+        <item>11 DE NOVIEMBRE</item>
+        <item>20 DE JULIO</item>
+        <item>AEROPUERTO</item>
+        <item>AGRICOLA DE SEGUROS</item>
+        <item>ALBANIA</item>
+        <item>ALHAMBRA</item>
+        <item>ALTA SUIZA</item>
+        <item>ALTO DEL PERRO</item>
+        <item>ALTO GALAN</item>
+        <item>ALTOS DE CAPRI</item>
+        <item>ALTOS DE CASTILLA</item>
+        <item>ALTOS DE GRANADA</item>
+        <item>ALTOS DE SANTA ANA</item>
+        <item>ANDES</item>
+        <item>AQUILINO VILLEGAS</item>
+        <item>ARANJUEZ</item>
+        <item>ARBOLEDA</item>
+        <item>ARBOLETES</item>
+        <item>ARENILLO</item>
+        <item>ARRAYANES</item>
+        <item>ASIS</item>
+        <item>ASTURIAS</item>
+        <item>AURES</item>
+        <item>AVANZADA</item>
+        <item>BAJA LEONORA</item>
+        <item>BAJA SUIZA</item>
+        <item>BAJO CERVANTES</item>
+        <item>BAJO GALAN</item>
+        <item>BAJO NEVADO</item>
+        <item>BAJO PALERMO</item>
+        <item>BAJO PERSIA</item>
+        <item>BAJO PRADO</item>
+        <item>BALCONES DE ARANJUEZ</item>
+        <item>BALCONES DE CHIPRE</item>
+        <item>BALCONES DE LA PALMA</item>
+        <item>BAVARIA</item>
+        <item>BELEN</item>
+        <item>BELLA MONTAÑA</item>
+        <item>BELLAVISTA</item>
+        <item>BENGALA</item>
+        <item>BETANIA</item>
+        <item>BOSCONIA</item>
+        <item>BOSQUE POPULAR</item>
+        <item>BOSQUES DE LA ALHAMBRA</item>
+        <item>BOSQUES DE NIZA</item>
+        <item>BOSQUES DEL NORTE</item>
+        <item>BOSQUES DEL TREBOL</item>
+        <item>BUENA ESPERANZA</item>
+        <item>CAMELIA</item>
+        <item>CAMILO TORRES</item>
+        <item>CAMINO DE LA PALMA</item>
+        <item>CAMINO DEL MEDIO</item>
+        <item>CAMPAMENTO</item>
+        <item>CAMPO AMOR</item>
+        <item>CAMPOHERMOSO</item>
+        <item>CANDELARIA</item>
+        <item>CASERIO LA ENEA</item>
+        <item>CASTELLANA</item>
+        <item>CASTILLA</item>
+        <item>CENTENARIO</item>
+        <item>CENTRO</item>
+        <item>CERRO DE ORO</item>
+        <item>CERROS DE LA ALHAMBRA</item>
+        <item>CERVANTES</item>
+        <item>CHACHAFRUTO</item>
+        <item>CHAPINERO</item>
+        <item>CHIPRE</item>
+        <item>CHIPRE VIEJO</item>
+        <item>CIUDADELA DEL CIEGO</item>
+        <item>COLINAS DE SAN SEBASTIÁN</item>
+        <item>COLINAS DEL VIENTO</item>
+        <item>COLOMBIA</item>
+        <item>COLON</item>
+        <item>COLSEGUROS</item>
+        <item>COMUNEROS</item>
+        <item>CONDOMINIO EL TEJAR</item>
+        <item>CONDOMINIO EL TEJAR</item>
+        <item>CONJUNTO CAMPOHERMOSO</item>
+        <item>CONJUNTO CERRADO FUNDADORES</item>
+        <item>CONJUNTO CERRADO LA ESTACIÓN</item>
+        <item>CONJUNTO CERRADO SANTA ANA</item>
+        <item>CONJUNTO IBIZA</item>
+        <item>CONJUNTO LAS AMERICAS</item>
+        <item>DELICIAS</item>
+        <item>EDIFICIO TEJARES DEL BOSQUE</item>
+        <item>EL BOSQUE</item>
+        <item>EL CAIRO</item>
+        <item>EL CAMPIN</item>
+        <item>EL CARIBE</item>
+        <item>EL CARMEN</item>
+        <item>EL ENCUENTRO</item>
+        <item>EL PALMAR</item>
+        <item>EL PARAISO</item>
+        <item>EL PINAR</item>
+        <item>EL PORTAL DEL BOSQUE</item>
+        <item>EL PRADO</item>
+        <item>EL ROCIO</item>
+        <item>EL SOL</item>
+        <item>EL TREBOL</item>
+        <item>ESCUELA DE CARABINEROS</item>
+        <item>ESCUELA DE TRABAJO LA LINDA</item>
+        <item>ESTACION URIBE</item>
+        <item>ESTADIO</item>
+        <item>ESTAMBUL</item>
+        <item>ESTRADA</item>
+        <item>ESTRELLA</item>
+        <item>EUCALIPTUS</item>
+        <item>FANNY GONZALEZ</item>
+        <item>FATIMA</item>
+        <item>FUNDADORES</item>
+        <item>GALAN</item>
+        <item>GALERIAS</item>
+        <item>GALICIA</item>
+        <item>GONZALEZ</item>
+        <item>GRANJAS DE ESTAMBUL</item>
+        <item>GRANJAS Y VIVIENDAS</item>
+        <item>GUADUALES</item>
+        <item>GUAMAL</item>
+        <item>GUAYACANES</item>
+        <item>HOLANDA</item>
+        <item>HOSPITAL GERIATRICO SAN ISIDRO</item>
+        <item>HOYO FRIO</item>
+        <item>ISABELA</item>
+        <item>JAZMIN</item>
+        <item>JESUS DE LA BUENA ESPERANZA</item>
+        <item>JUANCHITO</item>
+        <item>KENNEDY</item>
+        <item>LA ALAMEDA</item>
+        <item>LA ARGENTINA</item>
+        <item>LA ASUNCIÓN</item>
+        <item>LA CAPILLA</item>
+        <item>LA CAROLA</item>
+        <item>LA CAROLITA</item>
+        <item>LA CHIMENEA I Y II</item>
+        <item>LA CUMBRE</item>
+        <item>LA DANIELA</item>
+        <item>LA ENEA</item>
+        <item>LA FRANCIA</item>
+        <item>LA FUENTE</item>
+        <item>LA ISLA</item>
+        <item>LA LINDA</item>
+        <item>LA LIVONIA</item>
+        <item>LA MONTAÑA</item>
+        <item>LA PALMA</item>
+        <item>LA PAZ</item>
+        <item>LA PLAYA</item>
+        <item>LA PRIMAVERA</item>
+        <item>LA PROVIDENCIA</item>
+        <item>LA QUINTA</item>
+        <item>LA RAMBLA</item>
+        <item>LA RIVIERA</item>
+        <item>LA SULTANA</item>
+        <item>LA TOSCANA</item>
+        <item>LA UNION</item>
+        <item>LAS AMERICAS</item>
+        <item>LAS COLINAS</item>
+        <item>LAURELES</item>
+        <item>LEONORA</item>
+        <item>LICORERA</item>
+        <item>LLERAS</item>
+        <item>LOMA VERDE</item>
+        <item>LOS AGUSTINOS</item>
+        <item>LOS ALAMOS</item>
+        <item>LOS ALCAZARES</item>
+        <item>LOS CEDROS</item>
+        <item>LOS GUADUALES</item>
+        <item>LOS PINOS</item>
+        <item>LOS ROSALES</item>
+        <item>LOS SAUCES</item>
+        <item>LUSITANIA</item>
+        <item>MAIZAL</item>
+        <item>MALHABAR</item>
+        <item>MALTERIA</item>
+        <item>MARMATO</item>
+        <item>MILAN</item>
+        <item>MINITAS</item>
+        <item>MIRADOR DE LA SIERRA</item>
+        <item>MONTANA</item>
+        <item>MORROGACHO</item>
+        <item>NEVADO</item>
+        <item>NIÑO JESÚS DE PRAGA</item>
+        <item>NOGALES</item>
+        <item>NUEVO HORIZONTES</item>
+        <item>NUEVO VERSALLES</item>
+        <item>PALERMO</item>
+        <item>PALMAR</item>
+        <item>PALOGRANDE</item>
+        <item>PALONEGRO O ALTOS DEL ENCENILLO</item>
+        <item>PANAMERICANA</item>
+        <item>PANORAMA</item>
+        <item>PARQUE CASTILLA</item>
+        <item>PARTE DEL ECOPARQUE</item>
+        <item>PEPE CACERES</item>
+        <item>PERALONSO</item>
+        <item>PERSIA</item>
+        <item>PIAMONTE</item>
+        <item>PIO XII</item>
+        <item>POBLADO</item>
+        <item>PORTAL DE LOS ALCAZARES</item>
+        <item>PORTAL DE NOGALES</item>
+        <item>PORTAL DE SAN LUIS</item>
+        <item>PORTAL EUCALIPTUS</item>
+        <item>PORTALES</item>
+        <item>PORVENIR</item>
+        <item>PUERTA DEL SOL (CORINTO)</item>
+        <item>QUINTA HISPANIA</item>
+        <item>RESIDENCIAS CALDAS</item>
+        <item>RESIDENCIAS MANIZALES</item>
+        <item>RINCON CASTILLA</item>
+        <item>RINCON DE LA PALMA</item>
+        <item>RINCÓN DE DOÑA ELVIRA</item>
+        <item>RINCÓN DEL TREBOL</item>
+        <item>SACATIN</item>
+        <item>SAENZ</item>
+        <item>SAMARIA</item>
+        <item>SAN ANTONIO</item>
+        <item>SAN CAYETANO</item>
+        <item>SAN FERNANDO</item>
+        <item>SAN FRANCISCO</item>
+        <item>SAN IGNACIO</item>
+        <item>SAN JOAQUIN</item>
+        <item>SAN JORGE</item>
+        <item>SAN JOSE</item>
+        <item>SAN LUIS</item>
+        <item>SAN LUIS</item>
+        <item>SAN MARCEL</item>
+        <item>SAN REMO</item>
+        <item>SAN SEBASTIAN</item>
+        <item>SAN SEBASTIÁN DE BUENA VISTA</item>
+        <item>SAN VICENTE</item>
+        <item>SANCANCIO</item>
+        <item>SANTA ANA</item>
+        <item>SANTA HELENA</item>
+        <item>SANTOS</item>
+        <item>SECTOR BOLIVARIANA</item>
+        <item>SECTOR DEL BATALLON</item>
+        <item>SECTOR EL AGUACATE</item>
+        <item>SECTOR GALLINAZO</item>
+        <item>SECTOR MALHABAR II</item>
+        <item>SENA</item>
+        <item>SIERRA BONITA</item>
+        <item>SIERRA MORENA</item>
+        <item>SIERRA MORENA</item>
+        <item>SINAI</item>
+        <item>SOLFERINO</item>
+        <item>SOLIDARIDAD</item>
+        <item>SOLIDARIDAD</item>
+        <item>TACHUELO</item>
+        <item>TEJARES DEL BOSQUE</item>
+        <item>TERMINAL DE TRANSPORTES</item>
+        <item>TERRAZAS DE CAMPOHERMOSO</item>
+        <item>TOPACIO</item>
+        <item>TORRES DE AVILA</item>
+        <item>TORRES DE ESPONSIÓN</item>
+        <item>TORRES DE ORIENTE</item>
+        <item>UNIVERSIDAD AUTONOMA</item>
+        <item>UNIVERSIDAD DE CALDAS</item>
+        <item>UNIVERSIDAD DE MANIZALES</item>
+        <item>UNIVERSIDAD NACIONAL</item>
+        <item>URB. ATALAYA</item>
+        <item>URB. BELLO HORIZONTE</item>
+        <item>URB. SANTA MÓNICA</item>
+        <item>URBANIZACIÓN EL RIO</item>
+        <item>URIBE</item>
+        <item>VALLES DE LA ALHAMBRA</item>
+        <item>VALVANERA</item>
+        <item>VELEZ</item>
+        <item>VENECIA</item>
+        <item>VERSALLES</item>
+        <item>VILLA CAFE</item>
+        <item>VILLA CARMENZA</item>
+        <item>VILLA DEL CAMPO</item>
+        <item>VILLA DEL RIO</item>
+        <item>VILLA DEL RIO</item>
+        <item>VILLA FUNDEMOS</item>
+        <item>VILLA JARDÍN</item>
+        <item>VILLA JULIA</item>
+        <item>VILLA KEMPIS</item>
+        <item>VILLA LUZ</item>
+        <item>VILLA MERCEDES</item>
+        <item>VILLA NUEVA</item>
+        <item>VILLA PILAR</item>
+        <item>VILLA PILAR II</item>
+        <item>VILLA REAL</item>
+        <item>VILLAHERMOSA</item>
+        <item>VIVEROS</item>
+        <item>VIVIENDA POPULAR</item>
+        <item>VIÑA DEL RIO</item>
+        <item>Veredas</item>
+        <item>YARUMALES I Y II</item>
+        <item>ZONA INDUSTRIAL</item>
+    </string-array>
+
+    <string-array name="veredas">
+            <item>Seleccione</item>
+            <item>Otra zona rural No Caldas</item>
+            <item>Agua Bonita</item>
+            <item>Altamar</item>
+            <item>Altamira</item>
+            <item>Alto Bonito</item>
+            <item>Alto Corinto</item>
+            <item>Alto Tablazo</item>
+            <item>Alto del Guamo</item>
+            <item>Alto del Naranjo</item>
+            <item>Alto del Zarzo</item>
+            <item>Bajo Corinto</item>
+            <item>Bajo Tablazo</item>
+            <item>Barrios</item>
+            <item>Belmira</item>
+            <item>Buenavista</item>
+            <item>Cascarero</item>
+            <item>Caselata</item>
+            <item>Chupaderos</item>
+            <item>Cuchilla de los Santas</item>
+            <item>Cuchilla del Salado</item>
+            <item>Cueva Santa</item>
+            <item>El Arenillo (Parte)</item>
+            <item>El Aventino</item>
+            <item>El Bosque</item>
+            <item>El Chuzo</item>
+            <item>El Desquite</item>
+            <item>El Diamante</item>
+            <item>El Guineo</item>
+            <item>El Paraiso</item>
+            <item>El Porvenir (Parte)</item>
+            <item>El Rosario</item>
+            <item>El Ruby</item>
+            <item>Espartillal</item>
+            <item>Farallones</item>
+            <item>Fonditos</item>
+            <item>Guacaica</item>
+            <item>Guacas</item>
+            <item>Hoyo Frio</item>
+            <item>Hoyo Frio</item>
+            <item>Java</item>
+            <item>La Arabia</item>
+            <item>La Argelia</item>
+            <item>La Aurora</item>
+            <item>La Cabaña</item>
+            <item>La China</item>
+            <item>La Enea (Parte)</item>
+            <item>La Esperanza</item>
+            <item>La Favorita</item>
+            <item>La Francia (Parte)</item>
+            <item>La Garrucha</item>
+            <item>La Linda (Parte)</item>
+            <item>La Manuela</item>
+            <item>La Palma</item>
+            <item>La Pava</item>
+            <item>La Pola</item>
+            <item>La Siria</item>
+            <item>La Trinidad</item>
+            <item>La Violeta</item>
+            <item>Lagunilla</item>
+            <item>Las Palomas</item>
+            <item>Las Pavas</item>
+            <item>Lisboa</item>
+            <item>Malpaso</item>
+            <item>Manzanares</item>
+            <item>Maracas</item>
+            <item>Mata de Guadua</item>
+            <item>Mina Rica</item>
+            <item>Minitas</item>
+            <item>Minitas</item>
+            <item>Morrocaliente</item>
+            <item>Morrogacho (Parte)</item>
+            <item>Morrogordo</item>
+            <item>Olivares</item>
+            <item>Patio Bonito</item>
+            <item>Pinares</item>
+            <item>Playa Rica</item>
+            <item>Pueblo Hondo</item>
+            <item>Quiebra de Velez</item>
+            <item>Quiebra del Billar</item>
+            <item>Rio Blanco</item>
+            <item>Rumazón</item>
+            <item>San Gabriel</item>
+            <item>San Juan</item>
+            <item>San Mateo</item>
+            <item>San Peregrino</item>
+            <item>Santa Clara</item>
+            <item>Santa Rita</item>
+            <item>Sierra Morena</item>
+            <item>Sinai</item>
+            <item>Tamboral</item>
+            <item>Tarroliso</item>
+            <item>Tebaida</item>
+            <item>Vereda Colombia km41</item>
+            <item>Villa Victoria</item>
+    </string-array>
+
+
+    <string-array name="tipoEntidadSalud">
+        <item>EPS</item>
+        <item>IPS</item>
+    </string-array>
+
+
+    <string-array name="tipoquejasalud">
+        <item>Asignación Cita medica general</item>
+        <item>Consulta Especializada</item>
+        <item>Medicamentos</item>
+        <item>Procedimientos Diagnósticos</item>
+        <item>Programación de Cirugías</item>
+        <item>Hospitalizados</item>
+        <item>Inconformidad en la atención</item>
+        <item>Barreras de afiliación</item>
+    </string-array>
+
+    <string-array name="EPS">
+        <item>Seleccione</item>
+        <item>ABN AMRO SEGUROS (COLOMBIA) S.A.</item>
+        <item>ACE SEGUROS S.A. (ANTES: CIGNA SEGUROS DE COLOMBIA S.A.)</item>
+        <item>ADMINISTRADORA DE FONDOS DE PENSIONES Y CESANTIAS S.A.</item>
+        <item>ALIANSA</item>
+        <item>ANAS WAYUU EPS INDIGENA</item>
+        <item>ARP POSITIVA</item>
+        <item>ASEGURADORA COLSEGUROS S. A.</item>
+        <item>ASEGURADORA DE VIDA COLSEGUROS</item>
+        <item>ASEGURADORA EL LIBERTADOR, S.A.</item>
+        <item>ASOCIACION DE CABILDOS DEL RESGUARDO INDIGENA SINU DE SAN AN</item>
+        <item>ASOCIACION DE CABILDOS INDIGENAS DEL CESAR DUSAKAWI EPSI</item>
+        <item>ASOCIACION INDIGENA DEL CAUCA “AIC”</item>
+        <item>ASOCIACION MUTUAL BARRIOS UNIDOS DE QUIBDO E.S.S.</item>
+        <item>ASOCIACION MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S</item>
+        <item>ASOCIACION MUTUAL LA ESPERANZA ASMET SALUD ESS</item>
+        <item>ASOCIACION MUTUAL LA SUIZA DE AMERICA EPS INDIGENA</item>
+        <item>AVIANCA</item>
+        <item>BANCO DE LA REPUBLICA</item>
+        <item>BARRANQUILLA SANA E.P.S. En Liquidación</item>
+        <item>BAVARIA</item>
+        <item>BBVA HORIZONTES SOCIEDAD ADMINISTRADORA DE FONDOS DE PENSION</item>
+        <item>BBVA SEGUROS DE VIDA COLOMBIA S.A</item>
+        <item>BBVA SEGUROS GANADERO COMPAÑÍA DE SEGUROS S.A.</item>
+        <item>BONSALUD En Liquidación</item>
+        <item>CAFESALUD E.P.S. S.A.</item>
+        <item>CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO</item>
+        <item>CAJA DE AUXILIOS Y PRESTACIONES DE LA ASOCIACION COLOMBIANA</item>
+        <item>CAJA DE COMPENSACION FAMILIAR COMFENALCO ANTIOQUIA</item>
+        <item>CAJA DE COMPENSACION FAMILIAR DE CALDAS CONFAMILIARES</item>
+        <item>CAJA DE COMPENSACION FAMILIAR DEL NORTE DE SANTANDER COMFANO</item>
+        <item>CAJA DE PREVISION SOCIAL DE COMUNCIACIONES “CAPRECOM E.P.S.”</item>
+        <item>CAJA DE PREVISION SOCIAL LOS TRABAJADORES DE LA UNIVERSIDAD</item>
+        <item>CAJA NACIONAL DE PREVISION CAJANAL</item>
+        <item>CAJA SALUD ARS UNION TEMPORAL</item>
+        <item>CAJANAL EPS</item>
+        <item>CALISALUD E.P.S.</item>
+        <item>CAPRESOCA EPS</item>
+        <item>CHUBB DE COLOMBIA COMPAÑÍA DE SEGUROS S.A.</item>
+        <item>CIA DE SEGUROS BOLIVAR S.A.</item>
+        <item>COLSEGUROS E.P.S.</item>
+        <item>COMFENALCO VALLE E.P.S.</item>
+        <item>COMPAÑIA AGRICOLA DE SEGUROS DE VIDA S.A.</item>
+        <item>COMPAÑÍA AGRICOLA DE SEGUROS S.A.</item>
+        <item>COMPAÑÍA ASEGURADORA DE FIANZAS S.A., CONFIANZA (ver novedad</item>
+        <item>COMPAÑIA CENTRAL DE SEGUROS DE VIDA S.A.</item>
+        <item>COMPAÑIA COLOMBIANA ADMINISTRADORA DE FONDOS DE PENSIONES Y</item>
+        <item>COLMENA</item>
+        <item>CREDISEGUR</item>
+        <item>COMPAÑIA DE SEGUROS DE VIDA AURORA</item>
+        <item>COMPAÑÍA MUNDIAL DE SEGUROS S.A.</item>
+        <item>COMPAÑIA SURAMERICANA ADMINISTRADORA DE RIESGOS PROFESIONALE</item>
+        <item>COMPAÑÍA SURAMERICANA DE SEGUROS S.A.</item>
+        <item>COMPENSAR E.P.S.</item>
+        <item>CONDOR S.A. COMPAÑÍA DE SEGUROS GENERALES</item>
+        <item>CONVENIO COMFAMA-COMFAMILIAR CAMACOL- UNION TEMPORAL)</item>
+        <item>CONVIDA</item>
+        <item>COOMEVA E.P.S. S.A.</item>
+        <item>COOPERATIVA DE SALUD COMUNITARIA DE GARCIA ROVIRA “COOPSAGAR</item>
+        <item>COOPERATIVA DE SALUD Y DESARROLLO INTEGRAL DE LA ZONA SUR OR</item>
+        <item>CORPORANONIMAS EN LIQUIDACIÓN</item>
+        <item>CRUZ BLANCA EPS S.A.</item>
+        <item>DIRECCION TERRITORIAL DE SALUD DE CALDAS</item>
+        <item>E.P.S. CONDOR S.A.</item>
+        <item>E.P.S. de CALDAS S.A.</item>
+        <item>E.P.S. FAMISANAR LTDA.</item>
+        <item>E.P.S. SALUDCOOP</item>
+        <item>E.P.S. Sanitas S.A.</item>
+        <item>ECOPETROL</item>
+        <item>EMMANUEL EPS INDIGENA</item>
+        <item>EMPRESA COOPERATIVA SOLIDARIA DE SALUD “ECOOPSOS”</item>
+        <item>EMPRESA DE TELEFONOS DE BOGOTA - ETB</item>
+        <item>EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL DE LA SALUD E.S.S</item>
+        <item>ENTIDAD PROMOTORA DE SALUD MALLAMAS EPSI</item>
+        <item>ENTIDAD PROMOTORA DE SALUD, PIJAOSALUD EPSI</item>
+        <item>EPS PROGR. COMFENALCO ANTIOQUIA</item>
+        <item>EPS RISARALDA LTDA. EN LIQUIDACIÓN.</item>
+        <item>EPS SERVICIO OCCIDENTAL DE SALUD S.A. - EPS-S.O.S. S.A</item>
+        <item>FERROCARRILES NACIONALES</item>
+        <item>FONDO DE PENSIONES DE LOS YA PENSIONES</item>
+        <item>FONDO DE PRESTACIONES SOCIALES DEL CONGRESO DE LA REPUBLICA</item>
+        <item>FONDO DE PRESTACIONES SOCIALES DEL MAGISTERIO</item>
+        <item>FONDO DE PREVISION SOCIAL DEL CONGRSO DE LA REPUBLICA FONPRE</item>
+        <item>FONDO DE SOLIDARIDAD PENSIONAL</item>
+        <item>FONDO DE SOLIDARIDAD Y GARANTIA - MINISTERIO DE SALUD</item>
+        <item>FONDOS DE PENSIONES Y CESANTIAS SANTANDER S.A.</item>
+        <item>FUERZAS MILITARES</item>
+        <item>GENERALI COLOMBIA-SEGUROS GENERALES S.A</item>
+        <item>HUMANA VIVIR S.A. E.P.S.</item>
+        <item>INPEC</item>
+        <item>INSTITUTO DE SEGUROS SOCIALES EPS</item>
+        <item>INSTITUTO DE SEGUROS SOCIALES I.S.S RIESGOS PROFESIONALES</item>
+        <item>INSTITUTO SEGUROS SOCIALES I.S.S PENSIONES</item>
+        <item>LA EQUIDAD SEGUROS DE VIDA ORGANISMOS COOPERATIVO - LA EQUID</item>
+        <item>LA INTERAMERICANA COMPAÑÍA DE SEGUROS GENERALES S.A.</item>
+        <item>LA PREVISORA S.A. COMPAÑÍA DE SEGUROS</item>
+        <item>LIBERTY SEGUROS DE VIDA</item>
+        <item>LIBERTY SEGUROS S.A.</item>
+        <item>MAPFRE SEGUROS GENERALES DE COLOMBIA S.A.</item>
+        <item>METROPOLITANA DE SALUD EPS EN LIQUIDACIÓN</item>
+        <item>MUTUAL SER E.S.S.</item>
+        <item>NUEVA E.P.S.</item>
+        <item>PENSIONES DE ANTIOQUIA</item>
+        <item>POLICIA NACIONAL</item>
+        <item>REDSALUD Atencion Humana EPS S.A.</item>
+        <item>RIESGOS PROFESIONALES COLMENA S.A COMPAÑIA DE SEGUROS DE VID</item>
+        <item>ROYAL &amp; SUN ALLIANCE SEGUROS (COLOMBIA) S.A.</item>
+        <item>SALUD COLPATRIA E.P.S.</item>
+        <item>SALUD TOTAL E.P.S.</item>
+        <item>SALUD VIDA S.A. E.P.S.</item>
+        <item>SEGUREXPO DE COLOMBIA S.A. ASEGURADORA DE CREDITO Y DEL COME</item>
+        <item>SEGUROS ALFA S.A.</item>
+        <item>SEGUROS COLPATRIA S.A.</item>
+        <item>SEGUROS COMERCIALES BOLIVAR S.A.</item>
+        <item>SEGUROS DE VIDA ALFA S.A.</item>
+        <item>SEGUROS DE VIDA COLPATRIA S.A.</item>
+        <item>SEGUROS DE VIDA DEL ESTADO S.A</item>
+        <item>SEGUROS DEL ESTADO S.A.</item>
+        <item>SELVASALUD S.A. E.PS.</item>
+        <item>SERVICIO NACIONAL DE APRENDIZAJE - SENA</item>
+        <item>SKANDIA ADMINISTRADORA DE FONDOS DE PENSIONES Y CESANTIAS S.</item>
+        <item>SKANDIA ALTERNATIVA</item>
+        <item>SOCIEDAD ADMINISTRADORA DE FONDOS DE PENSIONES Y CESANTIAS P</item>
+        <item>SOCIEDAD SOLIDARIA DE SALUD “SOLSALUD E.P.S S.A.”</item>
+        <item>SSS SALUD COLOMBIA EOS</item>
+        <item>SUSALUD EPS</item>
+        <item>TAYRONA EPS INDIGENA</item>
+        <item>UNIMEC E.P.S. S.A.</item>
+        <item>UNION TEMPORAL COMFAMILIARES EN SALUD U.T. (COMFAMILIAR CART</item>
+        <item>UNION TEMPORAL. ARS COMFENALCO (QUINDIO, SANTANDER)</item>
+        <item>UNISALUD</item>
+    </string-array>
+
+
+    <string-array name="IPS">
+        <item>Seleccione</item>
+        <item>ALIPAZ S.A.S</item>
+        <item>ANALISIS CLINICO CALDAS LIMITADA</item>
+        <item>ANGIOGRAFIA DE OCCIDENTE S.A.</item>
+        <item>ASOTRANSCAL IPS</item>
+        <item>ASOCIACION IPS MEDICOS INTERNISTAS DE CALDAS</item>
+        <item>ASOCIACION PRO-BIENESTAR DE LA FAMILIA COLOMBIANA PROFAMILIA</item>
+        <item>ASSBASALUD ESE</item>
+        <item>ATL-LTDA ASESORIAS TECNICAS EN SALUD LABORAL</item>
+        <item>AUDIOCOM SAS</item>
+        <item>CAJA DE COMPENSACION FAMILIAR DE CALDAS IPS SEDE VERSALLES</item>
+        <item>CAJA DE PREVISION SOCIAL DE COMUNICACIONES CAPRECOM</item>
+        <item>CARITAS ARQUIDIOCESANAS DE MANIZALES</item>
+        <item>CENTRO DE FERTILIDAD Y ENDOCRINOLOGIA REPRODUCTIV</item>
+        <item>CENTRO CARDIOLOGICO TODO POR EL CORAZON SAS</item>
+        <item>CENTRO CARVASCULAR DE CALDAS S.A.</item>
+        <item>CENTRO DE ATENCION A PACIENTES HEMOLIFE SAS</item>
+        <item>CENTRO DE DIAGNOSTICO UROLOGICO S.A C.D.U.S.A</item>
+        <item>CENTRO DE ENFERMEDADES MAMARIAS Y RADIOLOGIA DEL EJE CAFETER</item>
+        <item>CENTRO DE INVESTIGACIÓN E INFORMACIÓN EN DEFICIENCIAS AUDITI</item>
+        <item>CENTRO DE RECONOCIMIENTO DE CONDUCTORES CONDUCIR IPS LTDA</item>
+        <item>CENTRO DE REHABILITACIÓN INTEGRAL XIMENA GONZÁLEZ S.A.S</item>
+        <item>CENTRO HEMATOLOGICO DEL EJE CAFETERO S. A.S</item>
+        <item>CENTRO MEDICO ANGEL LIMITADA</item>
+        <item>CENTRO MEDICO DE ESPECIALISTAS CME S.A</item>
+        <item>CENTRO MEDICO EMANUEL S.A.S</item>
+        <item>CENTRO MEDICO GUAYACANES IPS SAS</item>
+        <item>CENTRO MEDICO Y ODONTOLOGICO SAN MARTIN CIA Y LTDA</item>
+        <item>CENTRO VISUAL MODERNO EU</item>
+        <item>CIRUESTETICA S.A</item>
+        <item>CLINICA AMAN S.A.</item>
+        <item>CLINICA DE ESPECIALISTAS EN ORTODONCIA S.A.S</item>
+        <item>CLINICA FAME IPS S.A</item>
+        <item>CLINICA PSIQUIATRICA SAN JUAN DE DIOS</item>
+        <item>CLÍNICA VERSALLES S.A</item>
+        <item>CLUB DE LEONES MANIZALES LA SUIZA</item>
+        <item>CMS COLOMBIA LTDA CORPORACION MEDICA SALUD PARA LOS COLOMBIA</item>
+        <item>COMUNIDAD TERAPEUTICA SEMILLAS DE AMOR</item>
+        <item>CONSORCIO LITOTRICIA EXTRACORCOREA</item>
+        <item>COOPERATIVA DE SERVICIOS ASOCIADOS DE SALUD SASCOOP</item>
+        <item>CORAZON &amp; VIDA CENTRO DE REHABILITACION CARDIOPULMONAR S.A.S</item>
+        <item>CORPORACION ALBERTO ARANGO RESTREPO CEDER</item>
+        <item>CORPORACION HOGARES CREA DE COLOMBIA SECCIONAL CALDAS - HOGA</item>
+        <item>CORPORACIÓN IPS EJE CAFETERO</item>
+        <item>CORPORACIÓN IPS SALUDCOOP</item>
+        <item>CORPORACIÓN IPS UNIVERSITARIA DE CALDAS</item>
+        <item>CORPORACIÓN PARA EL APOYO PEDAGÓGICO Y TERAPÉUTICO PARA EL N</item>
+        <item>COSMITET LTDA CORPORACION DE SERVICIOS MEDICOS INTERNACIONAL</item>
+        <item>CRUZ ROJA COLOMBIANA SECCIONAL CALDAS</item>
+        <item>CUIDARTE EN CASA S.A.S</item>
+        <item>DIAGNOSTIMED S.A.</item>
+        <item>ESTUDIOS E INVERSIONES MÉDICAS S. A. - ESIMED S. A.</item>
+        <item>ESTUDIOS OFTALMOLOGICOS S.A.S.</item>
+        <item>FISIOTERAPIA LIMITADA</item>
+        <item>FRESENIUS MEDICAL CARE COLOMBIA S.A</item>
+        <item>FUNDACION CENTRO DE INVESTIGACION MNEMATICA</item>
+        <item>FUNDACION FUNPAZ</item>
+        <item>FUNDACION PARA EL DESARROLLO INTEGRAL DE LA NIÑEZ, LA JUVENT</item>
+        <item>FUNDACION PARA EL DESARROLLO SOSTENIBLE Y LA COMPETITIVIDAD</item>
+        <item>FUNDACION PARA EL SERVICIO INTEGRAL DE ATENCION MEDICA-SIAM</item>
+        <item>FUNDACION PARA LA ATENCION DE LA SALUD MENTAL COMPORTAMIENTO</item>
+        <item>FUNDACION PEQUEÑO CORAZON</item>
+        <item>FUNDACION REVIVIENDO</item>
+        <item>FUNDACION SAN RAFAEL IPS</item>
+        <item>FUNDACION TELETON</item>
+        <item>GALENO EU CENTRO MEDICO Y DROGUERIA EL GALENO</item>
+        <item>GAMANUCLEAR LTDA</item>
+        <item>GLORIA NANCY TABARES BEDOYA E.U.</item>
+        <item>HAYES S.A.S</item>
+        <item>HEMERA UNIDAD DE INFECTOLOGÍA S.A.S</item>
+        <item>HERMANAS DE LA CARIDAD DOMINICAS DE LA PRESENTACION DE LA SA</item>
+        <item>HOSPITAL GERIATRICO SAN ISIDRO ESE</item>
+        <item>HOSPITAL SANTA SOFIA DE CALDAS ESE</item>
+        <item>IMAGENES DIAGNOSTICAS CLINICAS S.A</item>
+        <item>IMAGENES DIAGNOSTICAS LIMITADA</item>
+        <item>INSTITUTO CALDENSE DE PATOLOGIA ICP SA</item>
+        <item>INSTITUTO DE DIAGNOSTICO MEDICO S.A.-IDIME S.A</item>
+        <item>INSTITUTO DE GENETICA DEL EJE CAFETERO S.A.S</item>
+        <item>INSTITUTO DE MEDICINA ALTERNATIVA NUTRISERS LIMITADA</item>
+        <item>INSTITUTO MEDICO INTEGRADO CLINICA DE FRACTURAS REHABILITACI</item>
+        <item>INSTITUTO OFTALMOLOGICO DE CALDAS S.A.</item>
+        <item>INSTITUTO OFTALMOLOGICO DEL TOLIMA LTDA</item>
+        <item>INSTITUTO ONCOLOGICO S.A ION S.A</item>
+        <item>INTEGRA IMAGENES DIGITALES S.A.</item>
+        <item>INTERCONSULTASLIMITADA (V)</item>
+        <item>INVERSIONES DAMA SALUD S.A.</item>
+        <item>INVERSIONES EN RECREACION DEPORTE Y SALUD S.A - BODYTECH</item>
+        <item>IPS ESPECILIZADA S.A</item>
+        <item>JAIBANA IPS S.A.S</item>
+        <item>LABORATORIO BIOCLINICO DE MANIZALES LTDA</item>
+        <item>LABORATORIO CLINICO DE CALDAS IPS LTDA</item>
+        <item>LABORATORIO CLINICO MARCELA HOYOS RENDON S.A.S</item>
+        <item>LABORATORIO CLINICO SISTEMATIZADO LIMITADA</item>
+        <item>LABORATORIO CLINICO VALENCIA GARCIA Y CIA. LTDA</item>
+        <item>LABORATORIO DE PATOLOGÍA Y CITOLOGÍA CITOSALUD SAS</item>
+        <item>LABORATORIO INMUNOHEMATOLOGICO ESPECIALIZADO LIMITADA</item>
+        <item>LABORATORIO MEDICO ECHAVARRIA S.A.S</item>
+        <item>LASER REFRACTIVO DE CALDAS SA</item>
+        <item>LIGA CONTRA EL CANCER, SECCIONAL CALDAS</item>
+        <item>LINEA MEDICA AMIGA E.U.</item>
+        <item>MEDICAN LTDA</item>
+        <item>MEDICARTE S.A</item>
+        <item>MEINTEGRAL S.A.S</item>
+        <item>MULTIOPTICAS S.A</item>
+        <item>NEUROKIDS MANIZALES S.A.S.</item>
+        <item>NEUROLOGIA INTEGRAL DE CALDAS S.A.S</item>
+        <item>NUESTRA RED CALDAS LIMITADA</item>
+        <item>ODONTODIAGNOSTICO S.A.S</item>
+        <item>ODONTOIMAGEN LTDA</item>
+        <item>ONCOLOGOS DE OCCIDENTE S.A</item>
+        <item>ONCORADIO S.A</item>
+        <item>OPTICA SALUD COOP SA(OPTIKUS)</item>
+        <item>OPTICAS GMO COLOMBIA S.A.S</item>
+        <item>OPTILAGO UNO S.A.S.</item>
+        <item>ORTHOSMART S.A.S</item>
+        <item>ORTOESTUDIO LIMITADA</item>
+        <item>PARTISALUD SAS</item>
+        <item>PASBISALUD IPS SAS</item>
+        <item>POLICLINICO EJE SALUD S.A.S</item>
+        <item>PREVENCION OCUPACIONAL SAS</item>
+        <item>PRODENT IPS LTDA</item>
+        <item>PSP CALI PROGRAMAS DE SALUD PREVENTIVA LTDA U.</item>
+        <item>RECUPERARTE LIMITADA</item>
+        <item>RTS SUCURSAL CALDAS</item>
+        <item>SALUD ORAL S.A.</item>
+        <item>SALUD P&amp;P SAS</item>
+        <item>SALUD TOTAL EPS S.A</item>
+        <item>SALUD Y DEPORTE S.A.S.</item>
+        <item>SALUDENT SAS</item>
+        <item>SERVICIO DE EMERGENCIAS REGIONAL(SERV. DE AMBULANCIA PREPAGA</item>
+        <item>SERVICIOS ESPECIALES DE SALUD</item>
+        <item>SERVICIOS ESPECIALIZADOS DE OFTALMOLOGIA LIMITADA</item>
+        <item>SERVICIOS MÉDICOS LA CAMELIA LTDA</item>
+        <item>SERVICIOS MEDICOS Y ODONTOLOGICOS INTEGRALES E.U. ODONTOMED</item>
+        <item>SERVICIOS Y ASESORIAS INTEGRALES EN SALUD OCUPACIONAL S.A.S.</item>
+        <item>SINERGIA GLOBAL EN SALUD SAS</item>
+        <item>SOCIEDAD INTEGRAL DE ESPECIALISTAS EN SALUD S.A</item>
+        <item>STARLITE IPS MEDICINA ESTÉTICA LTDA</item>
+        <item>STETICS MEDICINA DE LA BELLEZA Y SPA S.A.S.</item>
+        <item>SU VIDA S.A.</item>
+        <item>UBA LA MACARENA</item>
+        <item>UNETE ODONTOLOGIA INTEGRAL Y ORTODONCIA S.A.S</item>
+        <item>UNIDAD EJE VISUAL S.A.</item>
+        <item>UNION DE CIRUJANOS S.A.S.</item>
+        <item>UNISALUD</item>
+        <item>UNIVER PLUS S.A</item>
+        <item>UT EL CAFETERO S.A</item>
+    </string-array>
+</resources>

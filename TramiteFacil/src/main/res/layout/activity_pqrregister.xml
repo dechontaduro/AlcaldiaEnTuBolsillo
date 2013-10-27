@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/ScrollIni"
+        android:layout_gravity="left|center_vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <include
+        android:id="@+id/headerQDS"
+        layout="@layout/headericonos"
+        android:layout_width="fill_parent" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pqr_wait"
+            android:id="@+id/imgPQR" />
+
+        <TextView
+            android:id="@+id/txtRadicado"
+            style="@style/RegisterPQRRadicado"
+            />
+
+        <TextView
+            android:id="@+id/txtResult"
+            style="@style/RegisterPQRMsg" />
+        <WebView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/webTwitter"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+        <include
+            android:id="@+id/foterAcerca"
+            layout="@layout/footer"
+            android:layout_width="fill_parent" />
+
+    </LinearLayout>
+</RelativeLayout>

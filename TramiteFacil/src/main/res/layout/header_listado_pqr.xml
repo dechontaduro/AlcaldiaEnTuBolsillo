@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="0dp"
+    android:background="@color/bar_theme_released_end"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header"
+        android:id="@+id/layoutHeader"
+        android:paddingLeft="0dp"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:text="Atras"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:id="@+id/btnBack"
+            android:textSize="14dp"
+            style="@style/textoEncabezado"
+            android:layout_weight="1"
+            android:background="@drawable/botonheader"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/txtcabecera"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAlignment="gravity"
+                android:text="@string/tituloAlcaldia"
+                android:textSize="22sp"
+                android:ellipsize="marquee"
+                android:lines="1"
+                android:focusableInTouchMode="true"
+                style="@style/textoEncabezado"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:text="Inicio"
+            android:id="@+id/btnHome"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="14dp"
+            android:layout_weight="1"
+            style="@style/textoEncabezado"
+            android:background="@drawable/botonheader"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/fondomispqr">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="No Radicado"
+            android:id="@+id/lblRadicado"
+            style="@style/textoEncabezado"
+            android:layout_gravity="left|center_vertical" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical">
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripcion"
+        android:ellipsize="marquee"
+        android:id="@+id/lblDesc"
+        android:layout_gravity="left|center_vertical" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_vertical">
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:text="Fecha"
+        android:gravity="center"
+        android:id="@+id/lblFecha"
+        android:layout_gravity="center_horizontal"
+        style="@style/textoEncabezado"
+        android:background="@drawable/fechapqr"/>
+
+     </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/iconoEstado"/>
+
+     </LinearLayout>
+
+</LinearLayout>

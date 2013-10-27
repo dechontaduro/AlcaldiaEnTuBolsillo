@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="0dp"
+    android:background="@color/bar_theme_released_end"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header"
+        android:id="@+id/layoutHeader"
+        android:paddingLeft="0dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/btnAtrasIco"
+            android:background="@drawable/btnatras"/>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/txtcabecera"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:lines="1"
+                android:focusableInTouchMode="true"
+                style="@style/textoEncabezado"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/btnHomeIco"
+            android:background="@drawable/btninicio"/>
+
+    </LinearLayout>
+</LinearLayout>
