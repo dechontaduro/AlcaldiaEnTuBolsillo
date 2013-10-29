@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" >
+        <shape>
+            <gradient android:type="linear"
+                android:gradientRadius="100"
+                android:startColor="@color/btn_ingresar_pressed_start"
+                android:endColor="@color/btn_ingresar_pressed_end"/>
+            <stroke
+                android:width="2dp"
+                android:color="@color/volver_pressed_start" />
+            <corners
+                android:topLeftRadius="8dp"
+                android:bottomLeftRadius="8dp"
+                android:topRightRadius="8dp"
+                android:bottomRightRadius="8dp"
+                />
+            <padding
+                android:left="6dp"
+                android:right="6dp" />
+
+            <solid
+                android:color="@color/bordeBoton"
+                />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient
+                android:startColor="@color/btn_ingresar_release_start"
+                android:endColor="@color/btn_ingresar_release_end"
+                android:angle="270" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/volver_pressed_start" />
+            <corners
+                android:topLeftRadius="8dp"
+                android:bottomLeftRadius="8dp"
+                android:topRightRadius="8dp"
+                android:bottomRightRadius="8dp"
+                />
+            <padding
+                android:left="6dp"
+                android:right="6dp" />
+
+        </shape>
+    </item>
+</selector>

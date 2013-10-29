@@ -1,15 +1,18 @@
 package com.bpmco.tramitefacil;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.view.Window;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,12 +28,15 @@ public class Activity_DatosPersonales extends Activity implements View.OnClickLi
 
     ImageButton btnAtras = null;
     ImageButton btnHome = null;
+    Button btnBorrarDatos = null;
     Ciudadano ciudadano = null;
     Contexto c = null;
 
     Button btnSiguiente = null;
     Spinner spTipoDoc = null;
     DatabaseHandler manejador = null;
+
+    LinearLayout lytppal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +47,9 @@ public class Activity_DatosPersonales extends Activity implements View.OnClickLi
         }catch(Exception e){
             e.printStackTrace();
         }
+
+        lytppal = (LinearLayout)findViewById(R.id.layoutContenido);
+        lytppal.setOnClickListener(this);
 
         TextView titulo = (TextView)findViewById(R.id.txtcabecera);
         titulo.setText(this.getString(R.string.title_activity_activity__datos_personales));
@@ -54,6 +63,9 @@ public class Activity_DatosPersonales extends Activity implements View.OnClickLi
         btnHome = (ImageButton)findViewById(R.id.btnHomeIco);
         btnHome.setOnClickListener(this);
 
+        btnBorrarDatos = (Button)findViewById(R.id.btnBorrarDatos);
+        btnBorrarDatos.setOnClickListener(this);
+
         spTipoDoc = (Spinner)findViewById(R.id.spTipoDoc);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.tipoDoc,android.R.layout.simple_spinner_item);
@@ -61,7 +73,7 @@ public class Activity_DatosPersonales extends Activity implements View.OnClickLi
 
         try{
             manejador = DatabaseHandler.getInstance();
-            cargarDatosCiudadano();
+            cargarDatosCiudadano(false);
             c = manejador.getHandlerContexto().getContexto();
             String lblNext =
                     this.getString(R.string.label_boton_siguiente
@@ -75,8 +87,12 @@ public class Activity_DatosPersonales extends Activity implements View.OnClickLi
     }
 
 
-    public void cargarDatosCiudadano(){
-        ciudadano = manejador.getHandlerCiudadano().getCiudadano();
+    public void cargarDatosCiudadano(boolean vacios){
+        ciudadano = new Ciudadano();
+        if(!vacios){
+            ciudadano = manejador.getHandlerCiudadano().getCiudadano();
+        }
+
         setCampoTexto(R.id.txtNombre, ciudadano.getNombres());
         setCampoTexto(R.id.txtApellido, ciudadano.getApellidos());
         setCampoTexto(R.id.txtNumId, ciudadano.getDocumento());
@@ -155,7 +171,6 @@ public class Activity_DatosPersonales extends Activity implements View.OnClickLi
         return spTipoDoc.getSelectedItem().toString();
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -163,10 +178,26 @@ public class Activity_DatosPersonales extends Activity implements View.OnClickLi
         return true;
     }
 
+    private void hideSoftKeyboard() {
+        InputMethodManager inputManager = (InputMethodManager) getBaseContext()
+                .getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (inputManager != null)
+            inputManager.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
+    }
+
     @Override
     public void onClick(View view) {
         if(view == btnAtras || view == btnHome){
             finish();
+        }
+
+
+        if(view == lytppal) {
+            hideSoftKeyboard();
+        }
+
+        if(view == btnBorrarDatos){
+            cargarDatosCiudadano(true);
         }
 
         if(view == btnSiguiente){

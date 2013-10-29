@@ -41,7 +41,7 @@ public class Activity_Config extends Activity implements View.OnClickListener {
             RadioButton rbWIFI = (RadioButton) findViewById(R.id.conn_wifi);
             RadioButton rbMovil = (RadioButton) findViewById(R.id.conn_movil);
 
-            if(contexto.getConexionType().equals("WIFI"))
+            if(contexto.getConexionType().equals(Contexto.CONN_TYPE.WIFI.toString()))
                 rbWIFI.setChecked(true);
             else
                 rbMovil.setChecked(true);
@@ -62,7 +62,7 @@ public class Activity_Config extends Activity implements View.OnClickListener {
                             break;
                     }
                     manejador.getHandlerContexto().guardarContexto(contexto);
-                    Toast.makeText(getApplicationContext(), "Se configuró el tipo de conexión", 2000).show();
+                    Toast.makeText(getApplicationContext(),getString(R.string.msj_conf_conexion), 2000).show();
                 }
             });
 

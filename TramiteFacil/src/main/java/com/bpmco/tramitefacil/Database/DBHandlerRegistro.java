@@ -123,12 +123,24 @@ public class DBHandlerRegistro {
         return registro;
     }
 
-	public List<Registro> getRegistros(){
+
+    public List<Registro> getRegistros(){
+        return getRegistros(null);
+    }
+
+	public List<Registro> getRegistros(String statusFilter){
         List<Registro> listaRegistros = new ArrayList<Registro>();
         String selectQuery =
                 "SELECT regId,traId,ciuId,regTipo,regFecha,regRadicacion,regInfo,regStatus,regGeo,regWSResultado,regVigencia " +
                     ",ultimoPaso,ultimoEstado,ultimaRespuesta,ultimaFecha " +
-                "FROM frm_trf_registro";
+                "FROM frm_trf_registro ";
+
+        if(statusFilter != null && !statusFilter.equals(""))
+        {
+            selectQuery += "WHERE regStatus IN (" + statusFilter + ") ";
+        }
+        selectQuery += "ORDER BY regId";
+
         Cursor cursor = db.rawQuery(selectQuery, null);
         Registro registro = null;
         if (cursor.moveToFirst()) {

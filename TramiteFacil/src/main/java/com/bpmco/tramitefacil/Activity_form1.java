@@ -24,6 +24,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bpmco.tramitefacil.DTO.Ciudadano;
 import com.bpmco.tramitefacil.DTO.Contexto;
 import com.bpmco.tramitefacil.DTO.Registro;
 import com.bpmco.tramitefacil.DTO.Respuesta;
@@ -73,12 +74,12 @@ public class Activity_form1 extends Activity implements View.OnClickListener {
                 {
                     case R.id.barrio:
                         spinnerArray = new ArrayList( Arrays.asList(getResources().getStringArray(R.array.barrios)));
-                        ArrayAdapter<String> adapterBarrio = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, spinnerArray);
+                        ArrayAdapter<String> adapterBarrio = new ArrayAdapter<String>(getApplicationContext(), R.layout.spinner_text, spinnerArray);
                         spinner.setAdapter(adapterBarrio);
                         break;
                     case R.id.vereda:
                         spinnerArray = new ArrayList( Arrays.asList(getResources().getStringArray(R.array.veredas)));
-                        ArrayAdapter<String> adapterVereda = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, spinnerArray);
+                        ArrayAdapter<String> adapterVereda = new ArrayAdapter<String>(getApplicationContext(), R.layout.spinner_text, spinnerArray);
                         spinner.setAdapter(adapterVereda);
                         break;
                 }
@@ -116,9 +117,21 @@ public class Activity_form1 extends Activity implements View.OnClickListener {
 
 
         EditText txtEdadAnio = (EditText)findViewById(R.id.txtEdadAnio);
-        txtEdadAnio.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+        txtEdadAnio.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onFocusChange(View view, boolean b) {
+            public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
                 EditText text = (EditText)findViewById(R.id.txtEdadAnio);
 
                 if(text.getText().toString().equals("")){
@@ -130,21 +143,40 @@ public class Activity_form1 extends Activity implements View.OnClickListener {
                 EditText EditTextMes = (EditText)findViewById(R.id.txtEdadMeses);
                 TextView textMes = (TextView)findViewById(R.id.textMes);
 
-                if(!b)
+                if(anios < 2)
                 {
-                    if(anios < 2)
-                    {
-                        EditTextMes.setVisibility(View.VISIBLE);
-                        textMes.setVisibility(View.VISIBLE);
-                    }
-                    else
-                    {
-                        EditTextMes.setVisibility(View.GONE);
-                        textMes.setVisibility(View.GONE);
-                    }
+                    EditTextMes.setVisibility(View.VISIBLE);
+                    textMes.setVisibility(View.VISIBLE);
                 }
-            }
+                else
+                {
+                    EditTextMes.setVisibility(View.GONE);
+                    textMes.setVisibility(View.GONE);
+                }
+             }
+
         });
+
+        precargarDatosCiudadano();
+    }
+
+    public void precargarDatosCiudadano()
+    {
+        DatabaseHandler handler = DatabaseHandler.getInstance();
+        Ciudadano ciudadano = handler.getHandlerCiudadano().getCiudadano(null);
+
+        EditText txtIdenti = (EditText)findViewById(R.id.txtIdenti);
+
+        if(ciudadano.getDocumento() != null){
+            txtIdenti.setText(ciudadano.getDocumento());
+        }
+
+        EditText txtNombreAfectado = (EditText)findViewById(R.id.txtNombreAfectado);
+
+        if(ciudadano.getNombres() != null){
+            txtNombreAfectado.setText(ciudadano.getNombres());
+        }
+
     }
 
     @Override
@@ -180,10 +212,13 @@ public class Activity_form1 extends Activity implements View.OnClickListener {
 
         String edadMeses = "0";
 
-        if(Integer.parseInt(txtEdadAnio.getText().toString()) < 2)
+        if(!txtEdadAnio.getText().toString().equals(""))
         {
-            EditText txtEdadMeses = (EditText)findViewById(R.id.txtEdadMeses);
-            edadMeses = txtEdadMeses.getText().toString();
+            if(Integer.parseInt(txtEdadAnio.getText().toString()) < 2)
+            {
+                EditText txtEdadMeses = (EditText)findViewById(R.id.txtEdadMeses);
+                edadMeses = txtEdadMeses.getText().toString();
+            }
         }
 
         Spinner type = (Spinner)findViewById(R.id.tipo);
@@ -201,8 +236,8 @@ public class Activity_form1 extends Activity implements View.OnClickListener {
       || sTipoDoc.equals("") || sbarrioVereda.equals("") || rbarrioVereda.equals("") || lugarProblema.equals("")
       || tipo.equals("")){
 
-            Toast.makeText(this, "Llene todos los datos faltantes", Toast.LENGTH_LONG).show();
-            return false;
+                Toast.makeText(this, "Llene todos los datos faltantes", Toast.LENGTH_LONG).show();
+                return false;
         }
 
 

@@ -1,5 +1,6 @@
 package com.bpmco.tramitefacil;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
@@ -35,8 +36,10 @@ public class Activity_PQRRegister extends Activity implements View.OnClickListen
 
     public ImageView imgPQR;
     public TextView txtResult;
-    public TextView txtRadicado;
-    public WebView webTwitter;
+
+    public ImageButton btnShare;
+
+    ProgressDialog progreso = null;
 
     private Contexto contexto;
 
@@ -51,9 +54,6 @@ public class Activity_PQRRegister extends Activity implements View.OnClickListen
         try{
             manejador = DatabaseHandler.getInstance();
             contexto = manejador.getHandlerContexto().getContexto();
-            Registro reg = manejador.getHandlerRegistro().getById(contexto.getRegId());
-            reg.setStatus(Registro.Status.REGISTRADO.toString());
-            manejador.getHandlerRegistro().save(reg);
         }catch (Exception e){
             //TODO: strings
             Toast.makeText(this, "No se Puede Crear o Abrir la Base de Datos", 2000).show();
@@ -61,15 +61,12 @@ public class Activity_PQRRegister extends Activity implements View.OnClickListen
             return;
         }
 
-        prepareNavigationButtons();
 
         imgPQR = (ImageView)findViewById(R.id.imgPQR);
         txtResult = (TextView)findViewById(R.id.txtResult);
-        txtRadicado = (TextView)findViewById(R.id.txtRadicado);
-        webTwitter = (WebView)findViewById(R.id.webTwitter);
+        btnShare = (ImageButton)findViewById(R.id.btnShare);
 
-        imgPQR.setImageResource(R.drawable.pqr_wait);
-
+        prepareNavigationButtons();
         sendPQR();
     }
 
@@ -86,6 +83,7 @@ public class Activity_PQRRegister extends Activity implements View.OnClickListen
         btnHome.setOnClickListener(this);
         btnMisPQR.setOnClickListener(this);
         btnAcerca.setOnClickListener(this);
+        btnShare.setOnClickListener(this);
     }
 
 
@@ -112,6 +110,13 @@ public class Activity_PQRRegister extends Activity implements View.OnClickListen
         else if(view == btnAcerca){
             Intent i = new Intent(Activity_PQRRegister.this, Activity_AcercaDe.class);
             startActivity(i);
+        }
+        else if(view == btnShare){
+            Intent shareIntent = new Intent();
+            shareIntent.setAction(Intent.ACTION_SEND);
+            shareIntent.putExtra(Intent.EXTRA_TEXT, btnShare.getTag().toString());
+            shareIntent.setType("text/plain");
+            startActivity(shareIntent);
         }
     }
 
@@ -144,30 +149,35 @@ public class Activity_PQRRegister extends Activity implements View.OnClickListen
         manejador.getHandlerContexto().guardarContexto(contexto);
         imgPQR.setImageResource(imgStatus);
         if(pqrResult != null){
-            txtRadicado.setText(pqrResult.numRadicado + "-" + pqrResult.anno);
-            //TODO: strings
-            txtResult.setText("Se radico con exito la solicitud");
-            viewTwitter();
+            String msg = this.getString(R.string.message_radicado, pqrResult.numRadicado, pqrResult.anno);
+            txtResult.setText(msg);
+
+            msg = this.getString(R.string.message_share, pqrResult.numRadicado, pqrResult.anno);
+            btnShare.setTag(msg);
+            btnShare.setVisibility(View.VISIBLE);
+            progreso.cancel();
         }
         else{
-            txtResult.setText(message);
+            String msg = this.getString(R.string.message_errorradicado, message);
+            txtResult.setText(msg);
+            progreso.cancel();
         }
     }
 
     private void sendPQR(){
-        if(contexto.getConexionType().equals("WIFI") && !Connectivity.isConnectedWifi(this.getApplicationContext())){
-            //TODO:strings
-            viewPQRResponse("Conectese a una red WIFI para radicar la PQR", R.drawable.pqr_error, null);
+        if(contexto.getConexionType().equals(Contexto.CONN_TYPE.WIFI.toString())
+                && !Connectivity.isConnectedWifi(this.getApplicationContext())){
+            viewPQRResponse(this.getString(R.string.message_error_nowifi), R.drawable.pqr_error, null);
             return;
         }
 
-        if(contexto.getConexionType().equals("WIFI/MOVIL") && !Connectivity.isConnected(this.getApplicationContext())){
-            //TODO:strings
-            viewPQRResponse("Conectese a una red WIFI o active su conectividad movil para radicar la PQR", R.drawable.pqr_error, null);
+        if(contexto.getConexionType().equals(Contexto.CONN_TYPE.WIFI_MOVIL.toString())
+                && !Connectivity.isConnected(this.getApplicationContext())){
+            viewPQRResponse(this.getString(R.string.message_error_nomovil), R.drawable.pqr_error, null);
             return;
         }
 
-        txtResult.setText("Por favor espere mientras se radica la PQRD");
+        verCargando();
 
         regPqrAsync = new registrarPqrAsync();
         regPqrAsync.setRegId(contexto.getRegId());
@@ -176,23 +186,13 @@ public class Activity_PQRRegister extends Activity implements View.OnClickListen
         regPqrAsync.execute();
     }
 
-    private void viewTwitter(){
-        webTwitter.setVisibility(View.VISIBLE);
-
-        webTwitter.getSettings().setDomStorageEnabled(true);
-        webTwitter.getSettings().setJavaScriptEnabled(true);
-
-        webTwitter.setWebViewClient(new WebViewClient() {
-            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-                //Toast.makeText(this, "Oh no! " + description, Toast.LENGTH_LONG).show();
-            }
-        });
-
-        String summary =
-                "<a href= \\\"https://twitter.com/share \\\" class= \\\"twitter-share-button \\\" data-text= \\\"Matrimonio Igualitario #senadoco #pl47_2012 http://www.imprenta.gov.co/gacetap/gaceta.mostrar_documento?p_tipo=05&amp;p_numero=47&amp;p_consec=33584 #sí Libertades \\\" data-via= \\\"votovisible \\\" data-lang= \\\"es \\\" data-size= \\\"large \\\" data-count= \\\"none \\\" data-dnt= \\\"true \\\">Twittear</a>\n" +
-                "<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>\n";
-
-        webTwitter.loadDataWithBaseURL("https://twitter.com", summary, "text/html", null, null);
-
+    public void verCargando(){
+        progreso = new ProgressDialog(Activity_PQRRegister.this);
+        progreso.setTitle(this.getString(R.string.title_progress_radicando));
+        progreso.setMessage(this.getString(R.string.message_progress_radicando));
+        progreso.setIndeterminate(true);
+        progreso.setCancelable(true);
+        progreso.show();
     }
+
 }

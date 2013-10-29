@@ -40,7 +40,71 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_gravity="center"
-                android:id="@+id/lyMisPqr"></LinearLayout>
+                android:id="@+id/lyMisPqr">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/fondomispqr3">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="No Radicado"
+                            style="@style/textoEncabezado"
+                            android:layout_gravity="left|center_vertical" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="25dp"
+                            android:text="Fecha"
+                            android:gravity="center"
+                            android:id="@+id/lblFecha"
+                            style="@style/textoEncabezado"
+                            android:layout_gravity="center_horizontal"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="Estado"
+                            style="@style/textoEncabezado"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

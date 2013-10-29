@@ -31,8 +31,10 @@ public class Activity_Resumen extends Activity implements View.OnClickListener{
     ImageButton btnAtras = null;
     ImageButton btnHome = null;
     Button btnGrabar = null;
+    Button btnCancelar = null;
     DatabaseHandler manejador = null;
     Contexto contexto = null;
+    Registro registro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +48,12 @@ public class Activity_Resumen extends Activity implements View.OnClickListener{
         btnAtras = (ImageButton)findViewById(R.id.btnAtrasIco);
         btnHome = (ImageButton)findViewById(R.id.btnHomeIco);
         btnGrabar = (Button)findViewById(R.id.btnRegistrar);
+        btnCancelar = (Button)findViewById(R.id.btnCancelar);
 
         btnAtras.setOnClickListener(this);
         btnHome.setOnClickListener(this);
         btnGrabar.setOnClickListener(this);
+        btnCancelar.setOnClickListener(this);
         verResumen();
     }
 
@@ -63,12 +67,57 @@ public class Activity_Resumen extends Activity implements View.OnClickListener{
             return;
         }
 
-        if(contexto.getTraId() == null || contexto.getTraId().equals(""))
+        if(contexto.getTraId() == null || contexto.getTraId().equals("")){
             btnGrabar.setVisibility(View.GONE);
+            btnCancelar.setVisibility(View.GONE);
+        }
+
+        registro = manejador.getHandlerRegistro().getById(contexto.getRegId());
+
+        verAvances(registro);
+        verRespuestas(registro);
+    }
+
+    private void verAvances(Registro reg) {
+        String ultimaRespuesta = reg.getUltimaRespuesta();
+        if(ultimaRespuesta != null && !ultimaRespuesta.equals(""))
+        {
+            LinearLayout lytR = (LinearLayout)findViewById(R.id.lyResumen);
+            TextView resumen = (TextView)lytR.findViewById(R.id.txtResumen);
+            resumen.setVisibility(View.VISIBLE);
+
+            LinearLayout lytAvance = (LinearLayout)findViewById(R.id.lytAvances);
+            lytAvance.setVisibility(View.VISIBLE);
+
+            LayoutInflater inflater = LayoutInflater.from(this);
+            LinearLayout lytAvanceElem = (LinearLayout)inflater.inflate(R.layout.ele_pqravance,null, false);
+
+            lytAvance.addView(lytAvanceElem);
+
+            TextView fecha = (TextView)lytAvanceElem.findViewById(R.id.lblFecha);
+            fecha.setText(reg.getUltimaFecha().substring(0, 10));
+
+            TextView avance = (TextView)lytAvanceElem.findViewById(R.id.lblAvance);
+            avance.setText(reg.getUltimaRespuesta());
+        }
+    }
 
 
-        Registro registro = manejador.getHandlerRegistro().getById(contexto.getRegId());
-        List<Elemento> lst = getElementos(registro);
+    public List<Elemento> getElementos(Registro reg){
+        List<Elemento> lst = new ArrayList<Elemento>();
+        try{
+            lst = manejador.getHandlerElemento().getElementos("0", reg.getTraId().toString(), reg.getId().toString());
+        }catch (Exception e){
+            Toast.makeText(this, "No se Puede Abrir la Base de Datos", 2000).show();
+            e.printStackTrace();
+            return null;
+        }
+        return lst;
+    }
+
+    private void verRespuestas(Registro reg) {
+
+        List<Elemento> lst = getElementos(reg);
         if(lst == null || lst.size() == 0){
             Toast.makeText(this, "No Se Encontraron Datos registrados", 2000).show();
             return;
@@ -119,18 +168,6 @@ public class Activity_Resumen extends Activity implements View.OnClickListener{
         }
     }
 
-    public List<Elemento> getElementos(Registro registro){
-        List<Elemento> lst = new ArrayList<Elemento>();
-        try{
-            lst = manejador.getHandlerElemento().getElementos("0", registro.getTraId().toString(), registro.getId().toString());
-        }catch (Exception e){
-            Toast.makeText(this, "No se Puede Abrir la Base de Datos", 2000).show();
-            e.printStackTrace();
-            return null;
-        }
-        return lst;
-    }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -143,26 +180,26 @@ public class Activity_Resumen extends Activity implements View.OnClickListener{
     public void onClick(View view) {
         if(view.getTag() == null){
             if(view == btnAtras){
-                finish();
+                Intent i = new Intent(Activity_Resumen.this, Activity_listadoPqr.class);
+                startActivity(i);
             }
 
-            if(view == btnHome){
+            if(view == btnHome || view == btnCancelar){
                 Intent i = new Intent(Activity_Resumen.this, Activity_listadoPqr.class);
                 startActivity(i);
             }
 
             if(view == btnGrabar){
-                Intent i = new Intent(Activity_Resumen.this, Activity_PQRRegister.class);
-                startActivity(i);
+                registro.setStatus(Registro.Status.REGISTRADO.toString());
+                manejador.getHandlerRegistro().save(registro);
 
-                DatabaseHandler handler = DatabaseHandler.getInstance();
-
-                Contexto contexto = handler.getHandlerContexto().getContexto();
-                //contexto.setRegId("");
                 contexto.setTraId("");
                 contexto.setCiuId("");
 
-                handler.getHandlerContexto().guardarContexto(contexto);
+                manejador.getHandlerContexto().guardarContexto(contexto);
+
+                Intent i = new Intent(Activity_Resumen.this, Activity_PQRRegister.class);
+                startActivity(i);
             }
         }else{
             Elemento elem = (Elemento)view.getTag();

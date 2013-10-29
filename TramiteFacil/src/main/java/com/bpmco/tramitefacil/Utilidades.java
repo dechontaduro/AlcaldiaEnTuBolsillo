@@ -61,4 +61,9 @@ public class Utilidades {
         }
         return byteBuffer.toByteArray();
     }
+
+    public static String dateFormateada(Date fecha){
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        return formato.format(fecha);
+    }
 }

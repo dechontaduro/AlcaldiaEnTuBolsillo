@@ -52,11 +52,11 @@ public class DBHandlerElementoOpcion {
 
     public void initData()
     {
-        createOptions("TD","10","Cedula de Ciudadanía","1");
+        createOptions("TD","10","Cedula de Ciudadania","1");
         createOptions("TD","20","NIT","2");
         createOptions("TD","30","Pasaporte","3");
         createOptions("TD","40","Tarjeta Identidad","4");
-        createOptions("TD","50","Cédula de Extranjería","5");
+        createOptions("TD","50","Cedula de Extranjeria","5");
         createOptions("TD","60","Registro Civil","6");
         createOptions("TPQR","0","DENUNCIA","1");
         createOptions("TPQR","1","QUEJA","2");
@@ -67,7 +67,7 @@ public class DBHandlerElementoOpcion {
         createOptions("TPQR","6","FELICITACION","7");
         createOptions("TPQR","7","PETICION DE INFORMACION","8");
         createOptions("TPQR","8","OTRO TIPO","9");
-        createOptions("SN","SI","Sí","1");
+        createOptions("SN","SI","Si","1");
         createOptions("SN","NO","No","1");
         createOptions("VER","Agua Bonita","Agua Bonita","1");
         createOptions("VER","Altamar","Altamar","2");
@@ -77,7 +77,7 @@ public class DBHandlerElementoOpcion {
         createOptions("EPS","SOS","SOS","2");
         createOptions("IPS","Pasbisalud","Pasbisalud","1");
         createOptions("IPS","Unisalud","Unisalud","2");
-        createOptions("TQSAL","Asignación cita médica","Asignación cita médica","1");
+        createOptions("TQSAL","Asignación cita medica","Asignación cita medica","1");
         createOptions("TQSAL","Consulta especializada","Consulta especializada","2");
         createOptions("TQSAL","Medicamentos","Medicamentos","3");
         createOptions("TLUG","Barrio","Barrio","1");

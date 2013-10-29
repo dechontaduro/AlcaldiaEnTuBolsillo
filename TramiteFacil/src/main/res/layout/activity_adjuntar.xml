@@ -19,6 +19,7 @@
             layout="@layout/headericonos"
             android:layout_width="fill_parent" />
 
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -26,6 +27,32 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:id="@+id/label" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lyFoto">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/header">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Foto"
+            android:textSize="18dp"
+            style="@style/textoEncabezado"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -58,39 +85,53 @@
                 android:layout_height="fill_parent"
                 android:id="@+id/lyMsjFoto">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:id="@+id/adjuntoFoto" />
-
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
+                    android:layout_height="wrap_content"
                     android:text=""
+                    android:layout_marginRight="10dp"
                     android:layout_gravity="center_vertical"
                     android:id="@+id/lblFoto" />
 
-                <ImageView
+                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_gravity="center_horizontal"
-                    android:id="@+id/borrarFoto" />
+                    android:id="@+id/btnBorrarFoto"
+                    android:text="Borrar"
+                    style="@style/textoEncabezado"
+                    android:background="@drawable/boton_simple_forma"
+                    android:visibility="gone"/>
 
             </LinearLayout>
 
         </LinearLayout>
+    </LinearLayout>
 
-        <TextView
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lyVideo">
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/lblAdjuntarVideo"
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
-            android:id="@+id/label" />
+            android:background="@drawable/header">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Video"
+                android:textSize="18dp"
+                style="@style/textoEncabezado"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -123,32 +164,40 @@
                 android:layout_height="fill_parent"
                 android:id="@+id/lyMsjVideo">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:id="@+id/adjuntoVideo" />
-
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
+                    android:layout_height="wrap_content"
                     android:text=""
+                    android:layout_marginRight="10dp"
                     android:layout_gravity="center_vertical"
                     android:id="@+id/lblVideo" />
 
-                <ImageView
+                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="20dp"
-                    android:layout_gravity="center_horizontal"
-                    android:id="@+id/borrarVideo"
-                    />
+                    android:id="@+id/btnBorrarVideo"
+                    android:text="Borrar"
+                    style="@style/textoEncabezado"
+                    android:background="@drawable/boton_simple_forma"
+                    android:visibility="gone"/>
 
             </LinearLayout>
 
         </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Los archivos adjuntos no deben superar las 8 Megas"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/lblNota"
+            android:visibility="gone"/>
 
         <Button
             android:layout_width="fill_parent"

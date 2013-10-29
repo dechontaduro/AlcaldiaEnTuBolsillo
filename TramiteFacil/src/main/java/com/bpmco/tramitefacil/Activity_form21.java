@@ -67,19 +67,17 @@ public class Activity_form21 extends Activity implements View.OnClickListener {
                 {
                     case R.id.barrio:
                         spinnerArray = new ArrayList( Arrays.asList(getResources().getStringArray(R.array.barrios)));
-                        ArrayAdapter<String> adapterBarrio = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, spinnerArray);
+                        ArrayAdapter<String> adapterBarrio = new ArrayAdapter<String>(getApplicationContext(), R.layout.spinner_text, spinnerArray);
                         spinner.setAdapter(adapterBarrio);
                         break;
                     case R.id.vereda:
                         spinnerArray = new ArrayList( Arrays.asList(getResources().getStringArray(R.array.veredas)));
-                        ArrayAdapter<String> adapterVereda = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, spinnerArray);
+                        ArrayAdapter<String> adapterVereda = new ArrayAdapter<String>(getApplicationContext(), R.layout.spinner_text, spinnerArray);
                         spinner.setAdapter(adapterVereda);
                         break;
                 }
             }
         });
-
-
 
         ImageButton btnAtras = (ImageButton)findViewById(R.id.btnAtrasIco);
         btnAtras.setOnClickListener(new View.OnClickListener() {

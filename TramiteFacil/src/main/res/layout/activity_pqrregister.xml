@@ -21,23 +21,22 @@
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/pqr_wait"
+            android:layout_marginTop="20dp"
             android:id="@+id/imgPQR" />
+            <TextView
+                android:id="@+id/txtResult"
+                style="@style/RegisterPQRMsg" />
 
-        <TextView
-            android:id="@+id/txtRadicado"
-            style="@style/RegisterPQRRadicado"
-            />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnShare"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/share"
+                android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/txtResult"
-            style="@style/RegisterPQRMsg" />
-        <WebView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/webTwitter"
-            android:layout_gravity="center"
-            android:visibility="gone" />
+
+
         </LinearLayout>
     </ScrollView>
     <LinearLayout

@@ -147,4 +147,6 @@
 
     <color name="fondo_start_edttexto">#ffffff</color>
     <color name="fondo_end_edttexto">#ffd7d7d7</color>
+
+    <color name="fondoAcercade">#ffd8bfff</color>
 </resources>

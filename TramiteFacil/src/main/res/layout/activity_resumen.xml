@@ -30,19 +30,72 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
-                android:id="@+id/lyResumen">
-
+                android:id="@+id/lytAvances"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="18dp"
+                    android:layout_marginTop="10dp"
+                    style="@style/textoEncabezado"
+                    android:background="@drawable/header"
+                    android:text="Avances"></TextView>
             </LinearLayout>
 
-            <Button
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:layout_margin="@dimen/activity_vertical_margin"
-                android:text="@string/txt_boton_registrar"
-                android:id="@+id/btnRegistrar"
-                style="@style/textoEncabezado"
-                android:background="@drawable/botoningresar"
-                android:layout_gravity="center" />
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/lyResumen">
+                <TextView
+                    android:id="@+id/txtResumen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="18dp"
+                    android:layout_marginTop="10dp"
+                    style="@style/textoEncabezado"
+                    android:background="@drawable/header"
+                    android:text="Resumen"
+                    android:visibility="gone"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/txt_boton_registrar"
+                    android:id="@+id/btnRegistrar"
+                    style="@style/textoEncabezado"
+                    android:background="@drawable/botoningresar"
+                    android:layout_gravity="center" />
+
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="Cancelar"
+                    android:id="@+id/btnCancelar"
+                    style="@style/textoEncabezado"
+                    android:background="@drawable/botoningresar"
+                    android:layout_gravity="center" />
+
+                </LinearLayout>
+
 
         </LinearLayout>
     </ScrollView>

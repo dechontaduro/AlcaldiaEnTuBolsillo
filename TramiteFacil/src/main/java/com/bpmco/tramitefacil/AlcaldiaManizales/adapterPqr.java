@@ -53,8 +53,7 @@ public class adapterPqr extends BaseAdapter implements Filterable
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        if (view == null)
-        {
+        if (view == null){
             view = inflater.inflate(R.layout.botonespqr, null);
         }
 

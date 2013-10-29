@@ -12,10 +12,12 @@ import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.MediaController;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -80,7 +82,6 @@ public class Activity_Adjuntar extends Activity implements View.OnClickListener{
                 startActivity(i);
             }
         });
-
 
         btnFoto = (ImageButton)findViewById(R.id.btnFoto);
         btnVideo = (ImageButton)findViewById(R.id.btnVideo);
@@ -285,31 +286,27 @@ public class Activity_Adjuntar extends Activity implements View.OnClickListener{
     }
 
     public void verMensaje(boolean esFoto, Respuesta r){
-        int idImagen = R.id.adjuntoVideo;
         int idLabel = R.id.lblVideo;
-        int idBorrar = R.id.borrarVideo;
+        int idBorrar = R.id.btnBorrarVideo;
         int idLyMensaje = R.id.lyMsjVideo;
         String lblTexto = this.getString(R.string.lblVideo);
 
         if(esFoto){
-            idImagen = R.id.adjuntoFoto;
             idLabel = R.id.lblFoto;
             lblTexto = this.getString(R.string.lblFoto);
-            idBorrar = R.id.borrarFoto;
+            idBorrar = R.id.btnBorrarFoto;
             idLyMensaje = R.id.lyMsjFoto;
         }
 
-        ImageView img = (ImageView)findViewById(idImagen);
-        img.setImageResource(R.drawable.enviado);
         TextView label = (TextView)findViewById(idLabel);
         label.setText(lblTexto);
         LinearLayout lyMensaje = (LinearLayout)findViewById(idLyMensaje);
         lyMensaje.setVisibility(View.VISIBLE);
 
-        ImageView imgBorrar = (ImageView)findViewById(idBorrar);
-        imgBorrar.setImageResource(R.drawable.borrar);
-        imgBorrar.setTag(r);
-        imgBorrar.setOnClickListener(new View.OnClickListener() {
+        Button btnBorrar = (Button)findViewById(idBorrar);
+        btnBorrar.setTag(r);
+        btnBorrar.setVisibility(View.VISIBLE);
+        btnBorrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Respuesta r = (Respuesta)view.getTag();
@@ -318,7 +315,7 @@ public class Activity_Adjuntar extends Activity implements View.OnClickListener{
                     File archivo = new File(r.getResValor());
                     archivo.delete();
                     LinearLayout lyMensaje = (LinearLayout)findViewById(R.id.lyMsjVideo);
-                    if(r.getEleId().equals("15")){
+                    if(r.getEleId().equals("15") || r.getEleId().equals("26")){
                         lyMensaje = (LinearLayout)findViewById(R.id.lyMsjFoto);
                     }
                     lyMensaje.setVisibility(View.GONE);

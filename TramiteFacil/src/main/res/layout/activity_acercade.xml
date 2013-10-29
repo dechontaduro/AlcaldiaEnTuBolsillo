@@ -6,6 +6,7 @@
         android:layout_height="fill_parent"
         android:id="@+id/ScrollIni"
         android:layout_gravity="left|center_vertical"
+        android:background="@color/fondoAcercade"
         xmlns:android="http://schemas.android.com/apk/res/android">
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -13,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical"
-            tools:context=".MainActivity" >
+            tools:context=".MainActivity">
 
             <include
                 android:id="@+id/headerQDS"
@@ -26,8 +27,7 @@
                 android:paddingLeft="0dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="fill_parent"
@@ -49,8 +49,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/desc"
@@ -68,11 +67,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="0dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/desc"
@@ -91,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="0dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="60dp"
@@ -109,8 +107,15 @@
                     android:textSize="18dp"
                     android:scrollHorizontally="false"
                     android:singleLine="false" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/mintic"/>
             </LinearLayout>
+
         </LinearLayout>
+
     </ScrollView>
 
     <LinearLayout

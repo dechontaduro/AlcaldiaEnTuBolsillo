@@ -17,6 +17,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bpmco.tramitefacil.DTO.Contexto;
 import com.bpmco.tramitefacil.DTO.Respuesta;
@@ -58,9 +59,11 @@ public class Activity_form2 extends Activity implements View.OnClickListener{
         botonSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                guardarDatos();
-                Intent i = new Intent(Activity_form2.this, Activity_Adjuntar.class);
-                startActivityForResult(i, 1);
+                if(guardarDatos())
+                {
+                    Intent i = new Intent(Activity_form2.this, Activity_Adjuntar.class);
+                    startActivityForResult(i, 1);
+                }
             }
         });
 
@@ -93,12 +96,12 @@ public class Activity_form2 extends Activity implements View.OnClickListener{
                 {
                     case R.id.eps:
                         spinnerArray = new ArrayList( Arrays.asList(getResources().getStringArray(R.array.EPS)));
-                        ArrayAdapter<String> adapterBarrio = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, spinnerArray);
+                        ArrayAdapter<String> adapterBarrio = new ArrayAdapter<String>(getApplicationContext(),  R.layout.spinner_text, spinnerArray);
                         spinner.setAdapter(adapterBarrio);
                         break;
                     case R.id.ips:
                         spinnerArray = new ArrayList( Arrays.asList(getResources().getStringArray(R.array.IPS)));
-                        ArrayAdapter<String> adapterVereda = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, spinnerArray);
+                        ArrayAdapter<String> adapterVereda = new ArrayAdapter<String>(getApplicationContext(),  R.layout.spinner_text, spinnerArray);
                         spinner.setAdapter(adapterVereda);
                         break;
                 }
@@ -141,10 +144,17 @@ public class Activity_form2 extends Activity implements View.OnClickListener{
         String stTipoEntidad = radioSelected.getText().toString();
         String entidad = spEntidad.getSelectedItem().toString();
 
+
+        if(motivo.equals("") || tipoQueja.equals("Seleccione") || nombreEntidad.equals("")
+           || stTipoEntidad.equals("") || entidad.equals(""))
+        {
+            Toast.makeText(this, "Llene todos los datos faltantes", Toast.LENGTH_LONG).show();
+            return false;
+        }
+
         DatabaseHandler handler = DatabaseHandler.getInstance();
         Contexto contexto = handler.getHandlerContexto().getContexto();
         String idRegistro = contexto.getTraId();
-
 
         handler.getHandlerElementoRespuesta().checkPageData("10,11,12,13,18");
 
@@ -189,8 +199,6 @@ public class Activity_form2 extends Activity implements View.OnClickListener{
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.activity_form2, menu);
         return true;
-
-
     }
 
 

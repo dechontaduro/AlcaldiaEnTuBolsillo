@@ -2,6 +2,7 @@ package com.bpmco.tramitefacil.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,7 +84,13 @@ public class adapterPqr extends BaseAdapter implements Filterable
 
                 handler.getHandlerContexto().guardarContexto(contexto);
                 Intent i = new Intent(c, Activity_DatosPersonales.class);
-                c.startActivity(i);
+                try
+                {
+                    c.startActivity(i);
+                }
+                catch (Exception e){
+                    Log.i("hola", e.toString());
+                }
             }
         });
         return view;

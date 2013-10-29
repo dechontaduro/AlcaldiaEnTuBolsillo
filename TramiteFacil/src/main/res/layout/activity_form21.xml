@@ -16,6 +16,13 @@
             android:layout_width="fill_parent" />
 
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,8 +32,9 @@
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/spbarriosvereda"
+            android:id="@+id/spTipo"
             android:drawSelectorOnTop="true"
+            android:layout_marginTop="10dp"
             android:entries="@array/tipos"
             style="?android:attr/spinnerDropDownItemStyle"></Spinner>
 
@@ -34,18 +42,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Lugar o Dirección en donde tiene el problema"/>
+            android:text="Lugar o dirección en Manizales en donde sucede el evento"/>
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:id="@+id/txtlugar"
+            android:layout_marginTop="10dp"
             android:background="@drawable/cuadrotexto"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Barrio o Vereda"
+            android:layout_marginTop="10dp"
             android:textSize="18dp"/>
 
 
@@ -53,6 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="10dp"
             android:id="@+id/rbarriovereda">
 
             <RadioButton
@@ -72,6 +83,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Seleccione"/>
 
         <Spinner
@@ -84,22 +96,24 @@
 
         <View
             android:layout_width="1dp"
-            android:layout_height="10dp">
+            android:layout_height="10dp"
+            android:layout_marginTop="10dp">
         </View>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/aseo_released_end"
+            android:background="@drawable/header"
             android:padding="5dp"
             android:text="Motivo de la solicitud :"/>
 
         <EditText
             android:layout_width="match_parent"
-            android:maxLines="10"
             android:id="@+id/txtMotivo"
-            android:layout_height="wrap_content"/>
-
+            android:layout_marginTop="10dp"
+            android:gravity="top"
+            android:layout_height="90dp"
+            android:background="@drawable/cuadrotexto"/>
 
         <View
             android:layout_width="1dp"
@@ -109,10 +123,12 @@
         <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
         android:id="@+id/btnSiguiente"
         android:text="Paso 2 de 3"
         android:background="@drawable/botoningresar"
         style="@style/textoEncabezado"/>
 
+    </LinearLayout>
     </LinearLayout>
 </ScrollView>

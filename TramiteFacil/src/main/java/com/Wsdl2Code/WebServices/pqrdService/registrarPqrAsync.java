@@ -57,14 +57,20 @@ public class registrarPqrAsync extends AsyncTask<Void, Void, Void> {
 
                     onAsyncResult.onResultSuccess(0, pqrResp.numRadicado + "-" + pqrResp.anno, pqrResp);
                 }
-                else
+                else{
+                    reg.setRespuestaWS(pqrResp.mensajeError);
+                    manejador.getHandlerRegistro().save(reg);
                     onAsyncResult.onResultFail(1, pqrResp.mensajeError);
+                }
 
             }
             catch (Exception e)
             {
+                reg.setRespuestaWS(e.getMessage());
+                manejador.getHandlerRegistro().save(reg);
+
                 e.printStackTrace();
-                onAsyncResult.onResultFail(2, "Error no definido");
+                onAsyncResult.onResultFail(2, e.getMessage());
             }
         }
         return null;

@@ -58,15 +58,15 @@ public class DBHandlerElemento {
 
     public void initData()
     {
-        createElement(1, "1","t","Lugar o Dirección en donde tiene el problema","NULL"  ,"1","AN","1","1","NULL","NULL","NULL","NULL");
+        createElement(1, "1","t","Lugar o direccion en Manizales donde sucedio el evento","NULL"  ,"1","AN","1","1","NULL","NULL","NULL","NULL");
         createElement(2, "1","r","Barrio o Vereda","TLUG"                               ,"1","NULL","1","2","NULL","NULL","NULL","NULL");
         createElement(3, "1","s","Barrio","BAR"                                         ,"1","NULL","1","3","2","0","Barrio","NULL");
         createElement(23, "1","s","Vereda","VER"                                        ,"1","NULL","1","3","2","0","Vereda","NULL");
-        createElement(6, "1","l","Información del Afectado","NULL"                      ,"0","NULL","1","4","NULL","NULL","NULL","NULL");
-        createElement(7, "1","s","Tipo de Identificación","TD"                          ,"1","NULL","1","5","NULL","NULL","NULL","NULL");
-        createElement(8, "1","t","No. de Identificación","NULL"                         ,"1","E","1","6","NULL","NULL","NULL","NULL");
+        createElement(6, "1","l","Informacion del Afectado","NULL"                      ,"0","NULL","1","4","NULL","NULL","NULL","NULL");
+        createElement(7, "1","s","Tipo de Identificacion","TD"                          ,"1","NULL","1","5","NULL","NULL","NULL","NULL");
+        createElement(8, "1","t","No. de Identificacion","NULL"                         ,"1","E","1","6","NULL","NULL","NULL","NULL");
         createElement(9, "1","t","Nombre del Afectado","NULL"                           ,"1","A","1","7","NULL","NULL","NULL","NULL");
-        createElement(4, "1","t","Edad (años)","NULL"                                   ,"1","E","1","8","NULL","NULL","NULL","NULL");
+        createElement(4, "1","t","Edad (anios)","NULL"                                  ,"1","E","1","8","NULL","NULL","NULL","NULL");
         createElement(5, "1","s","Edad (meses)","AMES"                                  ,"1","NULL","1","9","NULL","NULL","NULL","NULL");
 
         createElement(10, "1","r","Tipo Entidad Generadora de Queja","TGQ"              ,"1","NULL","2","1","NULL","NULL","NULL","NULL");
@@ -74,6 +74,7 @@ public class DBHandlerElemento {
         createElement(24, "1","s","IPS","EPS"                                           ,"1","NULL","2","2","10","0","EPS","NULL");
         createElement(12, "1","t","Nombre Entidad Generadora de Queja","NULL"           ,"1","AN","2","3","10","0","OTRA","NULL");
         createElement(13, "1","s","Clasifique su Queja de Salud","TQSAL"                ,"1","NULL","2","4","NULL","NULL","NULL","NULL");
+        createElement(29, "1","l","Adjuntos","NULL"                                     ,"0","NULL","1","4","NULL","NULL","NULL","NULL");
         createElement(14, "1","r","Desea incluir una foto?","SN"                        ,"1","NULL","4","1","NULL","NULL","NULL","NULL");
         createElement(15, "1","f","Foto","NULL"                                         ,"1","NULL","3","1","NULL","0","SI","NULL");
         createElement(16, "1","r","Desea incluir un video?","SN"                        ,"1","NULL","4","2","NULL","NULL","NULL","NULL");
@@ -81,13 +82,15 @@ public class DBHandlerElemento {
         createElement(18, "1","t","Motivo de la Solicitud","NULL"                       ,"1","AN","2","5","NULL","NULL","NULL","NULL");
 
         //Tramite 2
-        createElement(19, "2","t","Lugar o Dirección en donde tiene el problema","NULL" ,"1","AN","1","1","NULL","NULL","NULL","NULL");
+        createElement(19, "2","t","Lugar o direccion en Manizales donde sucedio el evento","NULL" ,"1","AN","1","1","NULL","NULL","NULL","NULL");
         createElement(20, "2","r","Barrio o Vereda","TLUG"                              ,"1","NULL","1","2","NULL","NULL","NULL","NULL");
         createElement(21, "2","s","Barrio","BAR"                                        ,"1","NULL","1","3","20","0","Barrio","NULL");
         createElement(25, "2","s","Vereda","VER"                                        ,"1","NULL","1","3","20","0","Vereda","NULL");
         createElement(22, "2","t","Motivo de la Solicitud","NULL"                       ,"1","AN","1","4","NULL","NULL","NULL","NULL");
+        createElement(28, "2","l","Adjuntos","NULL"                      ,"0","NULL","1","4","NULL","NULL","NULL","NULL");
         createElement(26, "2","f","Foto","NULL"                                         ,"1","NULL","2","1","NULL","0","SI","NULL");
         createElement(27, "2","v","Video","NULL"                                        ,"1","NULL","2","2","NULL","0","SI","NULL");
+
     }
 
 

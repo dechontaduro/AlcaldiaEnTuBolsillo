@@ -34,16 +34,18 @@
     <!-- Acerca de -->
 
     <string name="queesgov">¿Qué es Gobierno en Tu Bolsillo?</string>
-    <string name="descripcion">Gobierno en tu bolsillo es una aplicación que te permite
+    <string name="descripcion">Es una aplicación que te permite
     utilizar un télefono inteligente para realizar de forma rapida y sencilla
     registro y seguimiento de Peticiones, Quejas y Reclamos ante la alcaldía Municipal
     de Manizales.</string>
-    <string name="descripcion2">Desarollador Por:
-    \n\nCristian Camilo Cantillo.
+    <string name="descripcion2">Desarrollado Por:
+    \nCristian Camilo Cantillo.
     \nFelipe Callejas.
     \nJuan Carlos Gonzáles.
     \nSantiago Marín.</string>
-    <string name="descripcion3">Talento 100% Manizaleño para Manizaleños <a href="http://www.bpmco.co">BPMco</a></string>
+    <string name="descripcion3">Talento 100% Manizaleño para Manizaleños <a href="http://www.bpmco.co">BPMco</a>
+    \n\n©2013 - Derechos reservados.
+    </string>
     <string name="title_activity_activity__acerca_de">AcercaDe</string>
     <string name="title_activity_activity__render">AcercaDe</string>
     <string name="hello_world">Hello world!</string>
@@ -56,7 +58,7 @@
     <string name="titulo_adjuntar">Adjuntos</string>
     <string name="txt_boton_registrar">Registrar</string>
     <string name="title_activity_tomar__foto_">Foto</string>
-    <string name="lblAdjuntarFoto">Desea adjuntar una foto:</string>
+    <string name="lblAdjuntarFoto">Desea anexar algun archivo:</string>
     <string name="lblAdjuntarVideo">Desea adjuntar un video:</string>
     <string name="title_activity_activity_form1">PQR Salud</string>
     <string name="title_activity_activity_form2">PQR Salud</string>
@@ -64,6 +66,8 @@
     <string name="txt_resumen">Resumen</string>
     <string name="txt_inicio">Inicio</string>
     <string name="txt_configuracion">¿Qué conexión se usará para radicar y consultar las PQR?</string>
+    <string name="msj_conf_conexion">Se configuró el tipo de conexion correctamente</string>
+    <string name="msj_salir">¿Desea Salir de la Aplicación?</string>
 
     <!-- Foto y Video -->
     <string name="titulobotonguardarfoto">Guardar</string>
@@ -78,4 +82,20 @@
     <string name="title_activity_activity__preview__video">Video</string>
     <string name="label_boton_siguiente">Paso %1$s de %2$s</string>
     <string name="contentdescription"></string>
+    <string name="message_radicado">Se radicó con éxito la PQRD\n[%1$s-%2$s]</string>
+    <string name="message_share">Acabo de radicar la PQRD [%1$s-%2$s]\n con la App. Alcaldía en tu Bolsillo.\nDescárgala ya en https://play.google.com/store/apps/details?id=com.ea.game.pvz2_row.\nAlcaldía de Manizales. Gobierno en la Calle.</string>
+    <string name="message_errorradicado">No se pudo radicar la PQRD.\nPor favor intente sincronizar más tarde.[%1$s]</string>
+    <string name="message_error_nowifi">Conectese a una red WIFI para radicar la PQR</string>
+    <string name="message_error_nomovil">Conectese a una red WIFI o active su conectividad movil para radicar la PQR</string>
+
+    <string name="title_progress_radicando">Espere un momento</string>
+    <string name="message_progress_radicando">Estamos radicando su PQRD</string>
+
+    <string name="message_sync_error">Error al sincronizar [%1$s]</string>
+    <string name="message_sync_error_mintime">Hace menos de [%1$s] minutos se sincronizó</string>
+    <string name="message_sync_error_nowifi">Para sincronizar debe tener una conexión WIFI</string>
+    <string name="message_sync_error_nomovil">Para sincronizar debe tener una conexión WIFI o móvil</string>
+    <string name="message_sync">Se solicitó la radicación de [%1$s] PQRDs y el estatus de [%2$s] PQRDs</string>
+    <string name="title_progress_sync">Espere un momento</string>
+    <string name="message_progress_sync">Estamos sincronizando sus PQRD</string>
 </resources>

@@ -9,11 +9,10 @@ import android.view.View;
 import android.widget.Button;
 
 import com.Wsdl2Code.WebServices.pqrdService.Syncronize;
-import com.alcaldia.pqrws.alcaldiaWS;
-import com.bpmco.tramitefacil.Database.DBHandlerCiudadano;
-import com.bpmco.tramitefacil.Database.DatabaseHandler;
 
 public class MainActivity extends Activity implements View.OnClickListener{
+    Syncronize sync;
+
     Button btnIngresar = null;
 
     @Override
@@ -21,14 +20,34 @@ public class MainActivity extends Activity implements View.OnClickListener{
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         btnIngresar = (Button)findViewById(R.id.btnIngresar);
         btnIngresar.setOnClickListener(this);
 
         TRLocationListener locationListener = new TRLocationListener(this.getApplicationContext());
 
-        Syncronize sync = new Syncronize();
-        sync.start(this.getApplicationContext());
+        sync = new Syncronize();
+        sync.setOnResultListener(asynResult);
+        sync.execute(this.getApplicationContext());
     }
+
+    Syncronize.OnAsyncResult asynResult = new Syncronize.OnAsyncResult() {
+        @Override
+        public void onResultSuccess(final int resultCode, final String message) {
+            runOnUiThread(new Runnable() {
+                public void run() {
+                }
+            });
+        }
+
+        @Override
+        public void onResultFail(final int resultCode, final String errorMessage) {
+            runOnUiThread(new Runnable() {
+                public void run() {
+                }
+            });
+        }
+    };
 
 
     @Override

@@ -15,7 +15,7 @@
 
             <include
                 android:id="@+id/headerListado"
-                layout="@layout/header"
+                layout="@layout/headericonos"
                 android:layout_width="fill_parent" />
 
             <Button
@@ -46,9 +46,10 @@
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/layoutBtnPqr"
                 android:layout_gravity="center">
+
 
                 <ListView
                     android:layout_width="wrap_content"
@@ -65,7 +66,7 @@
                     android:layout_width="fill_parent"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_height="70dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="left">
 
                     <TextView
@@ -74,52 +75,114 @@
                         android:text="@string/lbl_sincronizacion"
                         android:textSize="18dp"
                         android:textStyle="bold"
-                        android:layout_marginBottom="10dp"
                         android:id="@+id/lblsinc" />
 
                     <LinearLayout
+                        android:orientation="horizontal"
                         android:layout_width="fill_parent"
-                        android:layout_height="fill_parent">
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="5dp">
+
+                   <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="fecha"
+                        android:textSize="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/lblFechaSinc"/>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_weight="2">
+
+                            <Button
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/btnSync"
+                                android:text="Sincronizar"
+                                android:layout_gravity="right"
+                                style="@style/textoEncabezado"
+                                android:background="@drawable/boton_simple_forma"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left">
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="fecha"
+                            android:text="Tipo de Conexion:"
                             android:textSize="18dp"
-                            android:id="@+id/lblFechaSinc"
+                            android:textStyle="bold"
+                            android:id="@+id/lblsinc"
+                            android:layout_marginRight="20dp"
                             android:layout_gravity="center_vertical"/>
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="20dp"
-                            android:layout_gravity="center"
-                            android:id="@+id/icoWifi"
-                            android:src="@drawable/wifides"/>
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="left">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_gravity="center"
-                            android:id="@+id/icoDatos"
-                            android:src="@drawable/datosdes"/>
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:id="@+id/icoWifi"
+                                android:src="@drawable/wifides"/>
 
-                        <ImageButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="fill_parent"
-                            android:layout_marginLeft="10dp"
-                            android:id="@+id/btnConfig"
-                            android:background="@null"
-                            android:src="@drawable/configuracion2"/>
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_gravity="center"
+                                android:id="@+id/icoDatos"
+                                android:src="@drawable/datosdes"/>
 
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_weight="2">
 
+                                <Button
+                                    android:layout_width="130dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/btnConfig"
+                                    android:text="Configuracion"
+                                    android:layout_gravity="right"
+                                    style="@style/textoEncabezado"
+                                    android:background="@drawable/boton_simple_forma"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
                     </LinearLayout>
-
                  </LinearLayout>
 
 
-                <ImageView
+               <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

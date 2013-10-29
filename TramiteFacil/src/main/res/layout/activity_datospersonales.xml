@@ -23,6 +23,17 @@
             layout="@layout/headericonos"
             android:layout_width="fill_parent" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/btnBorrarDatos"
+            android:text="Borrar Datos"
+            android:layout_gravity="right"
+            style="@style/textoEncabezado"
+            android:background="@drawable/boton_simple_forma"/>
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -161,7 +172,7 @@
 
         <Button
             android:layout_width="fill_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_margin="@dimen/activity_vertical_margin"
             android:text="@string/btn_ingresar"
             android:id="@+id/btnIngresar"

@@ -57,40 +57,50 @@ public class Activity_MisPqr extends Activity implements View.OnClickListener{
             LinearLayout lyRegistro = (LinearLayout)findViewById(R.id.lyMisPqr);
 
             for(int i = 0; i < n; i++){
+                Registro registro = listaRegistros.get(i);
+
                 LayoutInflater inflater = LayoutInflater.from(this);
                 LinearLayout lyDatos = (LinearLayout)inflater.inflate(R.layout.pqr_registradas,null, false);
+                lyDatos.setTag(registro);
                 lyRegistro.addView(lyDatos);
 
-                if((i % 2) != 0){
-                    lyDatos.setBackgroundResource(R.drawable.fondomispqr2);
-                }
+                if((i % 2) != 0) lyDatos.setBackgroundResource(R.drawable.fondomispqr2);
 
                 TextView radicado = (TextView)lyDatos.findViewById(R.id.lblRadicado);
-                TextView descripcion = (TextView)lyDatos.findViewById(R.id.lblDesc);
+                //TextView descripcion = (TextView)lyDatos.findViewById(R.id.lblDesc);
                 TextView fecha = (TextView)lyDatos.findViewById(R.id.lblFecha);
                 ImageView imagen = (ImageView)lyDatos.findViewById(R.id.iconoEstado);
 
-                Registro registro = listaRegistros.get(i);
-                radicado.setText(registro.getRadicacion());
-                descripcion.setText(registro.getInfo());
-                String fechaReg = Utilidades.date2string(registro.getFecha(), "dd-MM-yy");
+                String txtRadicado = "Sin Radicar";
+                if(registro.getRadicacion() != null){
+                    if(!registro.getRadicacion().equals("")){
+                        txtRadicado = registro.getRadicacion();
+                    }
+                }
+                radicado.setText(txtRadicado);
+                //descripcion.setText(registro.getInfo());
+                String fechaReg = Utilidades.dateFormateada(registro.getFecha());
                 fecha.setText(fechaReg);
 
-                imagen.setTag(registro);
+                //imagen.setTag(registro);
 
-                if(listaRegistros.get(i).getStatus().equals("0")){
-                    imagen.setBackgroundResource(R.drawable.enregistro);
-                }
-                else if(listaRegistros.get(i).getStatus().equals("1")){
-                    imagen.setBackgroundResource(R.drawable.registrado);
-                }
-                else if(listaRegistros.get(i).getStatus().equals("2")){
-                    imagen.setBackgroundResource(R.drawable.enviado);
+                if(listaRegistros.get(i).getStatus() != null){
+                    if(listaRegistros.get(i).getStatus().equals("0")){
+                        imagen.setBackgroundResource(R.drawable.enregistro);
+                    }
+                    else if(listaRegistros.get(i).getStatus().equals("1")){
+                        imagen.setBackgroundResource(R.drawable.registrado);
+                    }
+                    else if(listaRegistros.get(i).getStatus().equals("2")){
+                        imagen.setBackgroundResource(R.drawable.enviado);
+                    }else{
+                        imagen.setBackgroundResource(R.drawable.enregistro);
+                    }
                 }else{
-                    imagen.setBackgroundResource(R.drawable.enregistro);
+                    imagen.setBackgroundResource(R.drawable.borrar);
                 }
 
-                imagen.setOnClickListener(this);
+                lyDatos.setOnClickListener(this);
             }
         }else{
             Toast.makeText(this, "No Se Encontraron Datos registrados", 2000).show();
@@ -101,7 +111,7 @@ public class Activity_MisPqr extends Activity implements View.OnClickListener{
         List<Registro> listaRegistro = new ArrayList<Registro>();
         try{
             manejador = DatabaseHandler.getInstance();
-            listaRegistro = manejador.getHandlerRegistro().getRegistros();
+            listaRegistro = manejador.getHandlerRegistro().getRegistros("1,2,3");
         }catch (Exception e){
             Toast.makeText(this, "No se Puede Abrir la Base de Datos", 2000).show();
             e.printStackTrace();
